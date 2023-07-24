@@ -1,0 +1,144 @@
+$background-container: #28666e;
+@import url("./../Forms/indexHEADER/main.css");
+body {
+  display: flex;
+  background: $background-container;
+  height: auto;
+  overflow: auto !important;
+}
+
+#container {
+  width: 80%;
+  overflow-x: hidden;
+  margin-left: 20%;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #d4aa70;
+    border-radius: 100px;
+  }
+
+  .demoslide {
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+  .tile-split {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    background: #033f63;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    color: #cef806;
+    text-transform: uppercase;
+  }
+  #content {
+    padding-bottom: 10px;
+  }
+  .video-intro {
+    video {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+    z-index: 10000;
+    z-index: 10000;
+    display: none;
+    .wrapper-showList {
+      justify-content: space-between;
+      i {
+        padding: 10px;
+        display: block;
+      }
+    }
+  }
+  #container {
+    width: 100% !important;
+    margin-left: 0% !important;
+    div {
+      width: 100%;
+    }
+  }
+  nav {
+    position: fixed;
+    left: 0%;
+    right: 0;
+    .wrapper-showList {
+      display: flex;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      background: #033f63;
+      justify-content: space-around;
+      padding: 0;
+      padding-bottom: 10px;
+
+      li {
+        width: calc(100% / 4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 10px;
+          color: white;
+          font-weight: bold;
+          text-transform: capitalize;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &:hover {
+            color: yellow;
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;
+          }
+          i {
+            display: none !important;
+          }
+        }
+
+        input {
+          height: 50px;
+          width: 100%;
+          margin-top: 5px;
+          border-radius: 0px;
+          border: none;
+          outline: none;
+          color: black;
+          padding: 5px;
+          font-size: 1em;
+          border-radius: 5px;
+          &::placeholder {
+            color: black;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .search-input {
+        width: 90%;
+      }
+    }
+  }
+}

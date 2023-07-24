@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">Sinh Vật biển của bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                - Bà Rịa –Vũng Tàu từ lâu đã được biết đến là điểm du lịch nổi tiếng của cả nước, nằm ở khu vực cửa ngõ
+                miền Đông Nam bộ hướng ra biển Đông, liền kề với Thành phố Hồ Chí Minh- trung tâm của vùng kinh tế trọng
+                điểm phía nam với hệ thống giao thông kết nối khá thuận lợi. Đây chính là một điểm mạnh của ngành Du
+                lịch BR-VT so với các địa phương trong khu vực, cộng với tiềm năng du lịch đa dạng và phong phú, đặc
+                biệt là tiềm năng tự nhiên với 300 km chiều dài bờ biển trong đó có khoảng 156 km là các bãi tắm đẹp,
+                bằng phẳng, ít sóng lớn, nước trong xanh có các di tích, thắng cảnh kề cận, có rừng nguyên sinh Bình
+                Châu Phước Bửu, vườn Quốc gia Côn Đảo với hệ động thực vật phong phú, có suối khoáng nóng ngay trong
+                rừng nguyên sinh, Tỉnh có cả những ngọn núi cao như Núi Dinh, núi Minh Đạm. Tất cả đều có thể khai thác
+                cho các hoạt động du lịch đặc biệt là loại hình du lịch sinh thái.
+                <br>
+                - Khu Bảo tồn thiên nhiên Bình Châu – Phước Bửu thuộc địa phận huyện Xuyên Mộc, đây là khu rừng nguyên
+                sinh ven biển duy nhất còn lại tương đối nguyên vẹn ở nước ta, với diện tích 10.509 ha, trong đó có 50,8
+                ha đã được UBND tỉnh phê duyệt dự án phát triển du lịch sinh thái (giai đoạn 2002 -2006), từ năm 2012
+                khu bắt đầu đón khách tham quan. Nơi đây có hệ động thực vật rất phong phú với 205 loài có xương sống,
+                trong đó có 49 loài thú thuộc 21 họ, 9 bộ với 36 loài quý hiếm như gấu chó, cu li, khỉ đuôi lợn, mèo
+                rừng, vên vên, voọc xám bạc và 106 loài chim. Trong đó có nhiều loài quý hiếm như gà lôi hông tía, yến
+                núi, bồ câu nâu và có nhiều loài bò sát như trăn gấm, trăn đất, rắn hổ mang, tắc kè…và nơi đây có khoảng
+                600 tiêu bản thực vật trong đó có nhều nhiều loại gỗ quý hiếm như gỗ đỏ, cẩm lai, xoan đào, giáng hương,
+                huỳnh đàn, bình linh…Đặc biệt trong khu bảo tồn có suối khoáng nóng với hơn 70 điểm phun lộ thiên, mạch
+                nước nóng hoạt động gần 1km2 và chứa nhiều chất khoáng như silic, nitơ, lưu huỳnh, natri, clo rất có lợi
+                cho sức khỏe, nhiệt độ dòng khoáng nóng ở đây rất phù hợp khoảng 40oC. Đến đây bạn sẽ được khám phá cánh
+                rừng nguyên sinh bất tận, được câu cá, đi bộ, đạp xe, leo núi hay ngâm mình thư giãn trong làn nước
+                khoáng nóng tinh khiết món quà từ nhiên nhiên, có những điểm nước nóng tới 82oC, du khách có thể cùng
+                nhau luộc trứng và thưởng thức món trứng gà lòng đào thơm ngon.
+                <br>
+                - Vườn quốc gia Côn Đảo có diện tích gần 15.043ha, trong đó có 9.000ha biển và 6.043ha rừng. Rừng ở Côn
+                Đảo chủ yếu là rừng nguyên sinh, thuộc hệ sinh thái nhiệt đới hải đảo với 882 loài thực vật, gần 150
+                loài động vật, trong đó nhiều loài quý hiếm chỉ có ở Côn Đảo như sóc đen, thạch sùng có cánh, vài loài
+                chim chỉ có ở Côn Đảo như: chim điên mặt xanh, chim nhiệt đới, chim bồ câu Nicba, ghầm ghì trắng.
+                <br>
+                - Chế độ dòng chảy Biển Đông với sự thay đổi hai mùa gió chính đã tạo điều kiện thuận lợi cho sự phát
+                triển ấu trùng sinh vật biển từ Côn Đảo đi về phía bắc và phía nam. Ngược lại, vùng biển này dễ dàng thu
+                nhận nguồn phát tán từ các nơi khác. Do vậy, thành phần loài sinh vật biển ghi nhận ở đây tương đối đa
+                dạng và phong phú với 285 loài san hô cứng, 84 loài rong biển, 202 loài cá, 153 loài thân mềm, 130 loài
+                giun nhiều tơ, 110 loài giáp xác, 46 loài da gai. Bên cạnh đó, hệ sinh thái thảm cỏ biển - loài thực vật
+                có hoa ngầm sống trong môi trường nước biển - rộng khoảng 200ha chiếm tới 9 loài trong 16 loài cỏ biển
+                trên thế giới. Vùng biển Côn Đảo có đồi mồi, rùa da; các loài thú biển như cá voi đen, cá nược, đặc biệt
+                có bò biển Dugong, một trong những loài còn rất ít trên thế giới. Đến với Côn Đảo hôm nay, du khách sẽ
+                được trải nghiệm những ngày nghỉ thật sự thú vị với các tour du lịch sinh thái hấp dẫn như lặn biển ngắm
+                những rặng san hô trải dài hàng ki lô mét dưới làn nước trong xanh, mát lành, bơi lội cùng đàn cá đủ màu
+                sắc sặc sỡ, hay cùng nhau tham gia vào công tác bảo tồn đa dạng sinh học tại vườn quốc gia Côn Đảo, vượt
+                thử thách với hoạt động leo núi, thú vị với màn ngắm xem rùa đẻ trứng trong mùa sinh sản và cùng vui với
+                hoạt động hết sức ý nghĩa thả rùa con về biển… Năm 2014 Vườn quốc gia Côn Đảo được Ban Thư ký Công ước
+                Ramsar thế giới công nhận là một trong 2.203 khu đất ngập nước quan trọng quốc tế (gọi tắt là khu
+                Ramsar) và là khu Ramsar biển đầu tiên của Việt Nam. Côn Đảo còn được các báo chí nước ngoài như
+                Travel&Leisure, BBC ca ngợi là điểm đến hoang sơ và lý tưởng nên đến một lần trong đời và nơi đây cũng
+                vừa lọt vào danh sách 10 điểm đến đẹp nhất Châu Á năm 2016 của Chuyên trang du lịch Lonely Planet.
+                <br>
+                - Núi Dinh là ngọn núi nổi tiếng của BR-VT với vẻ đẹp hài hòa, sơn thủy hữu tình cao khoảng 500m. Nơi
+                đây được biết đến là một trong những điểm du lịch sinh thái độc đáo của BR-VT. Sau khi trải qua chuyến
+                du lịch leo núi với nhiều trải nghiệm thú vị du khách sẽ lên tới đỉnh Núi Dinh, đứng trên độ cao ngút
+                ngàn này du khách sẽ thỏa thích phóng tầm mắt ra xa để ngắm cảnh đẹp đồng bằng như một vũ trụ thu nhỏ,
+                hội tụ nhiều cung bậc của cuộc sống, cũng từ độ cao này thả mắt xuống chân núi du khách sẽ được chiêm
+                ngưỡng dòng suối Tiên tuyệt đẹp uốn lượn, chảy qua những con dốc dòng nước tạo thành những thác nước
+                phun bọt trắng xóa đủ để du khách vui đùa tung hứng với dòng nước trong xanh, mát lành. Và hoàng hôn là
+                thời điểm Núi Dinh được khoác trên mình một chiếc áo phủ trắng hơi sương mờ ảo, khiến cho du khách sẽ
+                cảm thấy se lạnh. Đó là lý do Núi Dinh mang nhiều nét đặc biệt với những ai đã từng đặt chân đến địa
+                danh này.
+                <br>
+                - Trước những tiềm năng, thế mạnh của loại hình Du lịch sinh thái nơi đây, BR-VT đã khai thác và hình
+                thành nên một số khu du lịch sinh thái mới, hấp dẫn du khách như Khu du lịch sinh thái Ngọc Xương, khu
+                du lịch sinh thái Bưng Bạc, KDL sinh thái Tứ Phương Thất Đảo…tất cả đều được bài trí mang đậm nét thôn
+                quê, bình dị, và gần gũi với thiên nhiên phù hợp với nhu cầu chung của du khách hiện nay, bởi không gian
+                thoáng đãng, đến đây du khách được thưởng thức những đặc sản vườn nhà, được chơi những trò chơi thú vị
+                như câu cá, cắm trại bên suối, leo núi …
+                <br>
+                - Du lịch sinh thái tại Bà Rịa –Vũng Tàu hiện là loại hình du lịch được đông đảo du khách lựa chọn.
+                Chính vì vậy để đảm bảo sự phát triển du lịch sinh thái một cách bền vững, địa phương cần đẩy mạnh phát
+                triển trên cơ sở khai thác hợp lý các thế mạnh tiềm năng của tài nguyên thiên nhiên. Đồng thời cần có sự
+                chỉ đạo, phối kết đồng bộ cả 3 yếu tố là chủ trương đường lối của các cơ quan quản lý Nhà nước, sự quản
+                lý điều hành của chính quyền các cấp và sự tham gia của cộng đồng dân cư địa phương và du khách. Nếu làm
+                tốt các khâu trên chắc chắn trong tương lai du lịch sinh thái sẽ là tiền đề phát triển du lịch bền vững,
+                góp phần đáng kể vào sự nghiệp phát triển kinh tế-xã hội địa phương.
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

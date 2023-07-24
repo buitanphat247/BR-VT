@@ -1,0 +1,97 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<nav>
+    <div class="wrapper-showList">
+        <h1 class="title-showList">
+            Bà Rịa - Vũng Tàu Tôi Yêu
+        </h1>
+        <i class="fa-solid fa-bars user-clickNAV"></i>
+
+    </div>
+    <ul class="list-nav">
+        <li class="list-nav-item">
+            <a target="_blank" rel="noopener noreferrer" id="homepage">
+                <i class="fa-solid fa-house"></i> Trang chủ
+            </a>
+            <script>
+                document.getElementById("homepage").onclick = function () {
+                    if (window.location.pathname !== '/index.html') {
+                        window.location.href = './../../index.html'; // Điều hướng về trang index.html nếu ở trang khác
+                    }
+                }
+            </script>
+        </li>
+
+        <li class="list-nav-item">
+            <a rel="noopener noreferrer" id='docx_GDDPQ'>
+                <i class="fa-solid fa-book"></i> Tài Liệu GDĐP
+            </a>
+            <script>
+                document.getElementById("docx_GDDPQ").onclick = function () {
+                    if (window.location.pathname !== '/index.html') {
+                        window.location.href = './../docx/main.html'; // Điều hướng về trang index.html nếu ở trang khác
+                    } else {
+                        window.location.href = './Layout/docx/main.html';
+                    }
+                }
+            </script>
+        </li>
+        <li class="list-nav-item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-gamepad"></i> Trò Chơi
+            </a>
+        </li>
+        <li class="list-nav-item">
+            <a href="https://forms.gle/YNNvjGm8VEnXkWv7A" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-headset"></i> Liên Hệ
+            </a>
+        </li>
+        <li class="list-nav-item search-input">
+            <input type="text" placeholder="tìm kiếm nội dung">
+        </li>
+    </ul>
+</nav>
+
+<script>
+    setInterval(function () {
+        localStorage.setItem("nav_height", $("nav").height());
+    }, 0);
+    let user_CLICKcnt = false;
+    $('.user-clickNAV').click(function () {
+        if (!user_CLICKcnt) {
+            $('header').slideDown('slow');
+            $('#container').hide('slow');
+            user_CLICKcnt = true;
+        } else {
+            $('header').slideUp('slow');
+            $('#container').show('slow');
+            user_CLICKcnt = false;
+
+        }
+    });
+    function search_engine() {
+        let get_list = document.querySelectorAll(".list-item");
+        document.querySelector(".search-input input").oninput = function (e) {
+            let keyword = e.target.value.toLowerCase().trim();
+
+            for (let list of get_list) {
+                let title = list.querySelector('.title').innerHTML.toLowerCase();
+
+                // Kiểm tra nếu tiêu đề không chứa từ khóa nhập vào, thì ẩn mục đó
+                if (!title.includes(keyword)) {
+                    list.style.display = "none";
+                }
+            }
+
+            // Nếu không có từ khóa nhập vào, hiển thị lại tất cả các mục
+            if (e.target.value === '') {
+                for (let list of get_list) {
+                    list.style.display = "block";
+                }
+            }
+        }
+    }
+    setInterval(search_engine, 0);
+
+</script>

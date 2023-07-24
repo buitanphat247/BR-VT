@@ -1,0 +1,138 @@
+@import url("./../Forms/indexHEADER/main.css");
+body {
+  display: flex;
+  background: #28666e;
+  height: auto;
+  overflow: auto !important;
+}
+
+#container {
+  width: 80%;
+  overflow-x: hidden;
+  margin-left: 20%;
+}
+#container::-webkit-scrollbar {
+  width: 5px;
+}
+#container::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+#container::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
+}
+#container .demoslide {
+  display: flex;
+}
+#container .demoslide img {
+  width: 100%;
+}
+#container .tile-split {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  background: #033f63;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  color: #cef806;
+  text-transform: uppercase;
+}
+#container #content {
+  padding-bottom: 10px;
+}
+#container .video-intro video {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+    z-index: 10000;
+    z-index: 10000;
+    display: none;
+  }
+  header .wrapper-showList {
+    justify-content: space-between;
+  }
+  header .wrapper-showList i {
+    padding: 10px;
+    display: block;
+  }
+  #container {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+  #container div {
+    width: 100%;
+  }
+  nav {
+    position: fixed;
+    left: 0%;
+    right: 0;
+  }
+  nav .wrapper-showList {
+    display: flex;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    background: #033f63;
+    justify-content: space-around;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  nav ul li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  nav ul li a:hover {
+    color: yellow;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+  }
+  nav ul li a i {
+    display: none !important;
+  }
+  nav ul li input {
+    height: 50px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+  nav ul li input::placeholder {
+    color: black;
+    text-transform: capitalize;
+  }
+  nav ul .search-input {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

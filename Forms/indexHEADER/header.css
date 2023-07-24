@@ -1,0 +1,81 @@
+header {
+  background: #033f63;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  border-right: 1px solid white;
+}
+header .wrapper-showList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .wrapper-showList h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  color: #cef806;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .wrapper-showList i {
+  font-size: 1.5em;
+  display: none;
+  color: #cef806;
+}
+header .list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 15px;
+}
+header .list .list_item {
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+header .list .list_item a {
+  cursor: pointer;
+}
+header a,
+header li {
+  color: white;
+}
+header li {
+  color: white;
+}
+header li a:hover {
+  transition: all 0.5s ease-in-out;
+  color: #cef806;
+}
+header li .list-click:hover {
+  cursor: pointer;
+}
+
+header::-webkit-scrollbar {
+  width: 2px;
+}
+
+header::-webkit-scrollbar-track {
+  background-color: #dfdada;
+  border-radius: 100px;
+}
+
+header::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 100px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .wrapper-showList {
+    font-size: 13.15px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

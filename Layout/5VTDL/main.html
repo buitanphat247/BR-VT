@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">vị trí địa lí bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                - Bà Rịa - Vũng Tàu nằm ở miền Đông Nam Bộ, tiếp giáp tỉnh Đồng Nai ở phía Bắc, với TP. Hồ Chí Minh ở
+                phía Tây, với tỉnh Bình Thuận ở phía Đông, còn phía Nam giáp Biển Đông.
+                <br>
+                - Vị trí này rất đặc biệt, đây chính là cửa ngõ hướng ra biển Đông của các tỉnh trong khu vực miền Đông
+                Nam Bộ. Vị trí này cho phép tỉnh Bà Rịa - Vũng Tàu hội tụ nhiều tiềm năng để phát triển các ngành kinh
+                tế biển như: khai thác dầu khí trên biển, khai thác cảng biển và vận tải biển, khai thác và chế biến hải
+                sản, phát triển du lịch nghỉ dưỡng và tấm biển. Ở vị trí này, Bà Rịa - Vũng Tàu có điều kiện phát triển
+                tất cả các tuyến giao thông đường bộ, đường không, đường thủy, đường sắt và là một địa điểm trung chuyển
+                đi các nơi trong nước và thế giới.
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

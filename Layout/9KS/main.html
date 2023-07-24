@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">Khoáng Sản của bà rịa - vũng tàu </h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                <span class="txt-review-title">
+                    1. Tài nguyên nước
+                </span>
+                - Nguồn nước mặt của Bà Rịa – Vũng Tàu chủ yếu do ba con sông lớn cung cấp, đó là sông Thị Vải, đoạn
+                chảy
+                qua tỉnh dài 25 km, sông Dinh đoạn chảy qua tỉnh dài 30 km, sông Ray dài 120 km. Trên các con sông này
+                có 3 hồ chứa lớn là hồ Đá Đen, hồ sông Ray, hồ Châu Pha…
+                Bên cạnh đó, nguồn nước ngầm của tỉnh cũng khá phong phú, tổng trữ lượng có thể khai thác là 70.000
+                m3/ngày đêm, tập trung vào ba khu vực chính là: Bà Rịa – Long Điền 20.000 m3/ngày đêm; Phú Mỹ – Mỹ Xuân
+                25.000 m3/ngày đêm; Long Đất – Long Điền 15.000 m3/ngày đêm. Ngoài ba vùng trên, khả năng khai thác nước
+                ngầm rải rác khoảng 10.000 m3/ngày đêm. Nước ngầm trong tỉnh nằm ở độ sâu 60 – 90 m, có dung lượng dòng
+                chảy trung bình từ 10 – 20 m3/s nên khai thác tương đối dễ dàng. Các nguồn nước ngầm có thể cho phép
+                khai thác tối đa 500.000 m3/ngày đêm, bảo đảm cung cấp đủ nước cho nông nghiệp, công nghiệp và cho sinh
+                hoạt.
+                <span class="txt-review-title">
+                    2. Tài nguyên đất
+                </span>
+                - Với diện tích 197.514 ha, chia thành 4 loại: đất rất tốt là loại đất có độ phì rất cao, chiếm 19.60%
+                diện tích tự nhiên, chủ yếu là đất phù sa và đất xám; đất tốt chiếm 26,40%; đất trung bình chiếm 14,4%;
+                còn lại 39,60% là đất nhiễm phèn, mặn, đất xói mòn.
+                Đánh giá các loại đất của Bà Rịa – Vũng Tàu cho thấy: nhóm đất có ý nghĩa lớn cho sản xuất nông – lâm
+                nghiệp chiếm 60%, tỷ trọng này tương đối lớn so với nhiều tỉnh trong cả nước. Nhóm đất này bao gồm đất
+                phù sa, đất xám, đất đen và đất đỏ vàng. Điều này cho phép tỉnh có thể phát triển một nền nông nghiệp đủ
+                mạnh. Ngoài ra, còn một tỷ trọng lớn đất không thuận lợi cho phát triển nông nghiệp bao gồm đất cát, đất
+                nhiễm phèn, mặn, đất xói mòn…
+                <span class="txt-review-title">
+                    3. Tài nguyên rừng
+                </span>
+                - Diện tích rừng của Bà Rịa – Vũng Tàu không lớn. Đất có khả năng trồng rừng là 38.850 ha, chiếm 19,7%
+                diện tích tự nhiên, trong đó đất hiện đang có rừng là 30.186 ha (rừng tự nhiên là 15.993 ha, rừng trồng
+                là 14.253 ha), như vậy còn khoảng 8,664 ha đất lâm nghiệp chưa có rừng.
+                Hiện nay tỉnh có hai khu rừng nguyên sinh là: khu bảo tồn thiên nhiên Bình Châu – Phước Bửu có diện tích
+                11.392 ha và khu vườn quốc gia Côn Đảo diện tích gần 5.998 ha. Tài nguyên rừng đang có xu hướng giảm,
+                các loại rừng giàu (trữ lượng gỗ trên 180 m3/ha) không còn, rừng trung bình chỉ còn lại 1,5% diện tích
+                có rừng. Trước kia trong rừng có trên 700 loài gỗ, thảo mộc và hơn 200 loài động vật trong đó có nhiều
+                loại gỗ và động vật quý hiếm nhưng đến nay hầu như các loại gỗ và động vật quý hiếm không còn.
+                Rừng của Bà Rịa – Vũng Tàu chỉ có tầm quan trọng trong tạo cảnh quan, môi trường, phòng hộ và phát triển
+                du lịch, còn việc khai thác rừng lấy gỗ, nguyên liệu không lớn.
+                <span class="txt-review-title">
+                    4. Tài nguyên khoáng sản
+                </span>
+                - Bà Rịa – Vũng Tàu có nhiều loại khoáng sản, nhưng đáng kể nhất là dầu mỏ, khí thiên nhiên và khoáng
+                sản
+                làm vật liệu xây dựng, Bà Rịa – Vũng Tàu nằm trong vùng có tiềm năng lớn về dầu mỏ và khí thiên nhiên
+                của Việt Nam. Tổng trữ lượng tiềm năng dầu khí theo xác minh năm 2000 vào khoảng 2.500 – 3.500 triệu m3
+                (bao gồm dầu 957 triệu m3, khí 1.500 tỷ m3). Trong tổng trữ lượng dầu khí đã xác minh, vùng biển Bà Rịa
+                – Vũng Tàu có trữ lượng là 400 triệu m3 dầu, chiếm 93,29% trữ lượng cả nước; trữ lượng dầu khí khoảng
+                trên 100 tỷ m3, chiếm 16,2% trữ lượng khí cả nước.
+                Dầu mỏ và khí đốt của Bà Rịa – Vũng Tàu phân bố chủ yếu ở bể Cửu Long và bể Nam Côn Sơn. Bể Cửu Long trữ
+                lượng khai thác khoảng 170 triệu tấn dầu và 28 – 41 tỷ m3 khí. Trong đó, mỏ Bạch Hổ trữ lượng 100 triệu
+                tấn dầu và 25 – 27 tỷ m3 khí, mỏ Rồng trữ lượng 10 triệu tấn dầu và 2 tỷ m3 khí, mỏ Hồng Ngọc và Rạng
+                Đông trữ lượng 50 – 70 triệu tấn dầu và 10 – 15 tỷ m3 khí. Bể Cửu Long có điều kiện khai thác tốt nhất
+                do nằm không xa bờ, trong vùng biển nông (độ sâu đáy dưới 50 m), thuộc khu vực không có bão lớn. Bể Nam
+                Côn Sơn: trong 60 cấu tạo phát hiện, có nhiều cấu tạo đã khoan thăm dò và có dấu hiệu như Dừa, Mùa (lô
+                8), Đại Hùng, Thanh Long (các lô 05, 11, 12, 06, 04); các mỏ có triển vọng là Đại Hùng, Thanh Long,
+                Lan Tây, Lan Đỏ, Mộc Tinh, Rồng Bay, Mỏ Đại Hùng đã đi vào khai thác từ tháng 10 – 1994, trữ lượng
+                khai thác dao động trong khoảng 30 – 50 triệu tấn dầu và 6 – 10 tỷ m3 khí. Trữ lượng mỏ Lan Tây là
+                42 tỷ m3 khí, Lan Đỏ 14 tỷ m3 khí, sau đó có thể đưa lên 80 tỷ m3 cho cả 2 mỏ. Tài nguyên dầu khí
+                với tổng trữ lượng tiềm năng và tổng trữ lượng đã xác minh, đủ điều kiện để tỉnh phát triển công
+                nghiệp dầu khí thành ngành công nghiệp mũi nhọn trong chiến lược phát triển công nghiệp cả nước và
+                đưa Bà Rịa – Vũng Tàu thành một trung tâm khai thác và chế biến dầu khí lớn nhất Việt Nam. Khoáng
+                sản làm vật liệu xây dựng của Bà Rịa – Vũng Tàu rất đa dạng, bao gồm: đá xây dựng, đá ốp lát, phụ
+                gia xi măng, cát thuỷ tinh, bentonit, sét gạch ngói, cao lanh, cát xây dựng, than bùn, immenit… Hiện
+                nay, tỉnh Bà Rịa – Vũng Tàu đã xây dựng 19 mỏ với tổng trữ lượng 32 tỷ tấn, phân bố ở hầu khắp các
+                huyện trong tỉnh, nhưng chủ yếu ở các huyện Tân Thành, Long Đất, thị xã Bà Rịa và thành phố Vũng
+                Tàu. Chất lượng đá khá tốt, có thể dùng làm đá dăm, đá hộc cho xây dựng; giao thông, thuỷ lợi, đá
+                khối cho xuất khẩu. Nhìn chung các mỏ nằm gần đường giao thông nên khai thác thuận lợi. Đá ốp lát có
+                8 mỏ lớn với tổng trữ lượng 1.324 triệu m3, chủ yếu nằm ở huyện Côn Đảo. Chất lượng đá tốt, màu sắc
+                đẹp, nguyên khối lớn; phụ gia xi măng có 6 mỏ thuộc 3 huyện Long Đất, Xuyên Mộc và thị xã Bà Rịa,
+                tổng trữ lượng 44 triệu tấn. Các mỏ đều có điều kiện khai thác thuận lợi, có thể khai thác làm chất
+                kết dính, phụ gia xi măng. Tuy nhiên do xa nơi tiêu thụ nên giá thành cao, ít có ý nghĩa kinh tế;
+                cát thuỷ tinh, có 3 mỏ thuộc hai huyện Xuyên Mộc và Tân Thành, tổng trữ lượng 41 triệu tấn, chủ yếu
+                là cát trắng thạch anh và cát thuỷ tinh. Điều kiện khai thác thuận lợi nhưng chất lượng cát chỉ ở
+                mức trung bình có thể sử dụng làm thuỷ tinh cấp thấp như bao bì và hàng dân dụng. Ngoài ra, Bà Rịa –
+                Vũng Tàu còn có một trữ lượng đáng kể các loại khoáng sản vật liệu xây dựng khác như sét gạch ngói,
+                cao lanh, cát xây dựng, bentonit… nằm rải rác ở nhiều nơi, cho phép hình thành ngành công nghiệp sản
+                xuất vật liệu xây dựng rộng khắp trong tỉnh.
+                <span class="txt-review-title">
+                    5. Tài nguyên biển
+                </span>
+                - Bà Rịa – Vũng Tàu có bờ biển dài 305,4 km, trong đó khoảng 70 km có bãi cái thoai thoải, nước xanh,
+                có thể dùng làm bãi tắm quanh năm. Vịnh Giành Rái rộng khoảng 50 km2 có thể xây dựng một hệ thống
+                cảng hàng hải.
+                Với diện tích thềm lục địa trên 100.000 km2 đã tạo cho tỉnh không những có vị trí quan trọng về an
+                ninh quốc phòng, mà còn tạo ra một tiềm năng to lớn để phát triển các ngành kinh tế biển.
+                Thềm lục địa của Bà Rịa – Vũng Tàu có 661 loài cá, 35 loài tôm, 23 loài mực, hàng ngàn loài tảo,
+                trong đó có nhiều loài có giá trị kinh tế cao. Trữ lượng hải sản có thể khai thác tối đa hàng năm từ
+                150.000 – 170.000 tấn.
+                Tài nguyên biển của Bà Rịa – Vũng Tàu rất thuận lợi cho phát triển vận tải biển, hệ thống cảng, du
+                lịch và công nghiệp khai thác, chế biến hải sản.
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

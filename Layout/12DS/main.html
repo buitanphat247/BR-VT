@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">Dân số bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                Năm 2022, dân số toàn tỉnh BRVT là 1.178.695 người. Tuổi thọ trung bình của người dân 76,4 tuổi, cao hơn
+                so với mặt bằng chung cả nước là 73,6. (theo thống kê dân số BRVT năm 2022 Nâng cao chất lượng dân số
+                (dangcongsan.vn)).
+                <br>
+                Tỷ lệ đô thị hóa đạt 60,8% (2022 Tỷ lệ đô thị hóa đạt 60,8% - Báo Bà Rịa Vũng Tàu Online
+                (baobariavungtau.com.vn), khá cao so với bình quân chung của cả nước. Dân số thành thị tập trung chủ yếu
+                ở các thành phố và thị xã, đặc biệt là thành phố Vũng Tàu, thành phố Bà Rịa và thị xã Phú Mỹ. Dân số
+                nông thôn tập trung chủ yếu ở các huyện, đặc biệt là huyện Long Điền, huyện Xuyên Mộc và huyện Châu Đức.
+                <br>
+                - Phân bố dân cư tỉnh Bà Rịa - Vũng Tàu không đồng đều. Dân cư tập trung chủ yếu ở các thành phố và thị
+                xã, đặc biệt là thành phố Vũng Tàu, thành phố Bà Rịa và thị xã Phú Mỹ, ở các huyện có mật độ thấp hơn,
+                chủ yếu là dân cư nông nghiệp.
+                <br>
+                - Bà Rịa – Vũng Tàu có nhiều thành phần dân tộc, trong đó dân tộc Kinh chiếm phần lớn (trên 95%), ngoài
+                ra
+                còn có 38 dân tộc anh em, đông nhất là: Hoa, Chơro, Khmer, Chăm, Tày, Nùng, ... Đồng bào dân tộc phần
+                lớn di cư từ các vùng khác nhau đến định cư, sinh sống xen kẽ trong cộng đồng.
+
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        background: white !important;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+</html>

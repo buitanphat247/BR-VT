@@ -1,0 +1,148 @@
+nav {
+  position: fixed;
+  left: 20%;
+  right: 0;
+  background: #033f63;
+}
+nav .wrapper-showList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.5em;
+  display: none;
+  z-index: 10000000000000000000000000;
+}
+nav .wrapper-showList h1 {
+  padding: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+nav .wrapper-showList i {
+  padding: 10px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  width: 19.2307692308%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+nav ul li a:hover {
+  color: yellow;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+nav ul li input {
+  height: 80%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 5px;
+  font-size: 1em;
+}
+nav ul li input::placeholder {
+  color: black;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  nav {
+    position: fixed;
+    left: 0%;
+    right: 0;
+  }
+  nav .wrapper-showList {
+    display: flex;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    background: #033f63;
+    justify-content: space-around;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  nav ul li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  nav ul li a:hover {
+    color: yellow;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+  }
+  nav ul li a i {
+    display: none !important;
+  }
+  nav ul li input {
+    height: 30px !important;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+  nav ul li input::placeholder {
+    color: black;
+    text-transform: capitalize;
+  }
+  nav ul .search-input {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  nav .wrapper-showList {
+    font-size: 20px;
+  }
+  nav .list-nav {
+    font-size: 10px;
+  }
+  nav .list-nav .search-input {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 490px) {
+  nav .list-nav {
+    font-size: 11px;
+  }
+  nav .list-nav .search-input {
+    font-size: 1.4em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

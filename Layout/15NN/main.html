@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">nông nghiệp của bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                <span class="txt-review-title">
+                    - Ngành nông nghiệp tỉnh Bà Rịa – Vũng Tàu
+                </span>
+                - Nông nghiệp là một trong những ngành kinh tế quan trọng của tỉnh Bà Rịa – Vũng Tàu, đóng góp khoảng
+                10% GDP của tỉnh. Ngành nông nghiệp của tỉnh có nhiều tiềm năng phát triển, với diện tích đất nông
+                nghiệp lớn, khí hậu thuận lợi và nguồn nhân lực dồi dào.
+                <span class="txt-review-title">
+                    - Diện tích đất nông nghiệp
+                </span>
+                - Tỉnh Bà Rịa – Vũng Tàu có diện tích đất nông nghiệp lớn, với hơn 200.000 ha, trong đó đất trồng lúa
+                hơn 100.000 ha. Diện tích đất nông nghiệp của tỉnh tập trung chủ yếu ở các huyện Châu Đức, Xuyên Mộc,
+                Tân Thành và Đất Đỏ.
+                <span class="txt-review-title">
+                    - Khí hậu
+                </span>
+                Khí hậu của tỉnh Bà Rịa – Vũng Tàu mang tính chất nhiệt đới gió mùa, với nhiệt độ trung bình từ 26 đến
+                27 độ C, lượng mưa trung bình từ 1.500 đến 2.000 mm/năm. Khí hậu của tỉnh thuận lợi cho việc phát triển
+                các loại cây trồng như lúa, cây ăn quả, rau màu và cây công nghiệp.
+                <span class="txt-review-title">
+                    - Nguồn nhân lực
+                </span>
+                - Tỉnh Bà Rịa – Vũng Tàu có nguồn nhân lực dồi dào, với hơn 100.000 lao động nông nghiệp. Nguồn nhân lực
+                của tỉnh có kinh nghiệm và kỹ thuật trong sản xuất nông nghiệp.
+                <span class="txt-review-title">
+                    - Các loại cây trồng
+                </span>
+                - Các loại cây trồng chủ lực của tỉnh Bà Rịa – Vũng Tàu là lúa, cây ăn quả, rau màu và cây công nghiệp.
+                Lúa là cây trồng chủ lực của tỉnh, với diện tích trồng lúa lớn nhất trong vùng Đông Nam Bộ. Cây ăn quả
+                của tỉnh có nhiều chủng loại, nổi tiếng nhất là thanh long, chôm chôm, măng cụt và sầu riêng. Rau màu
+                của tỉnh được trồng quanh năm, cung cấp cho thị trường trong và ngoài tỉnh. Cây công nghiệp của tỉnh có
+                diện tích trồng lớn, chủ yếu là cao su, hồ tiêu và cà phê.
+                <span class="txt-review-title">
+                    - Ngành chăn nuôi
+                </span>
+                - Ngành chăn nuôi của tỉnh Bà Rịa – Vũng Tàu cũng có nhiều tiềm năng phát triển, với đàn gia súc, gia
+                cầm lớn. Các loại gia súc chủ lực của tỉnh là bò, lợn, dê và gia cầm chủ lực là gà, vịt, ngan.
+                <span class="txt-review-title">
+                    - Hướng phát triển
+                </span>
+                - Ngành nông nghiệp của tỉnh Bà Rịa – Vũng Tàu đang được tập trung phát triển theo hướng sản xuất hàng
+                hóa, ứng dụng công nghệ cao và bảo vệ môi trường. Ngành nông nghiệp của tỉnh đã đạt được nhiều thành tựu
+                quan trọng, góp phần nâng cao đời sống của nhân dân và phát triển kinh tế của tỉnh.
+                <br>
+                - Theo đề án 04-ĐA/TU của tỉnh Bà Rịa – Vũng Tàu về phát triển nông nghiệp ứng dụng công nghệ cao giai
+                đoạn 2020-2025 đặt mục tiêu giá trị sản xuất và thu nhập trên đơn vị diện tích đất sản xuất nông nghiệp
+                đến năm 2025 tăng gấp 1,5 lần so với năm 2021; tỷ trọng giá trị sản xuất nông nghiệp công nghệ cao đến
+                năm 2025 chiếm trên 50% tổng giá trị sản xuất nông nghiệp.
+                <br>
+                -Cùng với đó, đến năm 2025, 100% diện tích đất quy hoạch phát triển nông nghiệp công nghệ cao được thu
+                hồi để triển khai thực hiện. Theo Nghị quyết Đại hội Đảng bộ tỉnh Bà Rịa- Vũng Tàu lần thứ VII, nông
+                nghiệp ứng dụng công nghệ cao được xác định là một trong những trụ cột kinh tế của tỉnh. Với mục tiêu
+                trở thành một trong những trung tâm nông nghiệp công nghệ cao của cả nước, tỉnh Bà Rịa – Vũng Tàu dành
+                4.000ha đất tại các huyện Châu Đức, Xuyên Mộc, Đất Đỏ và TX Phú Mỹ để kêu gọi doanh nghiệp đầu tư phát
+                triển Nông nghiệp ứng dụng công nghệ cao.
+                <br>
+                - Đồng thời, Bà Rịa – Vũng Tàu xây dựng đưa vào hoạt động các vùng sản xuất trồng trọt ứng dụng công
+                nghệ cao. Tỉnh cũng đã ban hành tiêu chí xét chọn nhà đầu tư và dự án đầu tư về nông nghiệp ứng dụng
+                công nghệ cao, nông nghiệp sạch trên địa bàn, thành lập khu nông nghiệp ứng dụng công nghệ cao và quy
+                hoạch phân khu chức năng vùng sản xuất nông nghiệp ứng dụng công nghệ cao tại huyện Châu Đức.
+                <br>
+                - Theo thống kê của ngành chức năng tỉnh Bà Rịa – Vũng Tàu, địa phương hiện có 344 cơ sở sản xuất trồng
+                trọt ứng dụng công nghệ cao, với quy mô diện tích 5.272ha, diện tích đang sản xuất 5.255ha. Trong chăn
+                nuôi, hiện có 127 trang trại hoạt động chăn nuôi ứng dụng công nghệ cao với tổng diện tích khoảng 515ha,
+                chiếm tỷ lệ 38,5% tổng đàn gia cầm và 37,8% tổng đàn heo. Lĩnh vực thủy sản, có 19 cơ sở nuôi thủy sản
+                thương phẩm và sản xuất giống thủy sản ứng dụng công nghệ cao với tổng diện tích khoảng 409,7ha, tăng
+                11,5 ha so năm 2021.
+                <span class="txt-review-title">
+                    - Thành tựu
+                </span>
+                - Ngành nông nghiệp của tỉnh Bà Rịa – Vũng Tàu đã đạt được nhiều thành tựu quan trọng trong những năm
+                qua, cụ thể như:
+                <br>
+                • Sản lượng lúa của tỉnh đạt hơn 1 triệu tấn/năm.
+                <br>
+                • Sản lượng cây ăn quả của tỉnh đạt hơn 1 triệu tấn/năm.
+                <br>
+                • Sản lượng rau màu của tỉnh đạt hơn 500.000 tấn/năm.
+                <br>
+                • Sản lượng cây công nghiệp của tỉnh đạt hơn 1 triệu tấn/năm.
+                <br>
+                • Sản lượng chăn nuôi của tỉnh đạt hơn 200.000 tấn/năm.
+                <span class="txt-review-title">
+                    - Tiềm năng và lợi thế
+                </span>
+                - Ngành nông nghiệp tỉnh Bà Rịa – Vũng Tàu có nhiều tiềm năng và lợi thế để phát triển, cụ thể như:
+                <br>
+                • Diện tích đất nông nghiệp lớn.
+                <br>
+                • Khí hậu thuận lợi.
+                <br>
+                • Nguồn nhân lực dồi dào.
+                <br>
+                • Vị trí địa lý thuận lợi.
+                <br>
+                • Có nhiều chính sách hỗ trợ của Nhà nước.
+                Kết luận
+                - Ngành nông nghiệp tỉnh Bà Rịa – Vũng Tàu có nhiều tiềm năng và lợi thế để phát triển, góp phần nâng
+                cao đời sống của nhân dân và phát triển kinh tế của tỉnh. Với sự quan tâm và hỗ trợ của Nhà nước, ngành
+                nông nghiệp của tỉnh Bà Rịa – Vũng Tàu sẽ tiếp tục phát triển và đạt được nhiều thành tựu mới trong thời
+                gian tới.
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

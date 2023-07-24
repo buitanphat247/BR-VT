@@ -1,0 +1,204 @@
+@charset "UTF-8";
+.text-review {
+  padding: 10px;
+  color: white;
+  font-size: 1.2em;
+}
+.text-review .img-item {
+  display: block;
+  padding: 10px 0;
+  display: flex;
+}
+.text-review .img-item img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.text-review .txt-review-title {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  color: #cef806;
+}
+.text-review .text-center {
+  text-align: center;
+}
+.text-review button {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  outline: none;
+}
+.text-review button a {
+  font-size: 1.2em;
+  text-transform: capitalize;
+  padding: 5px 50px;
+  border: 1px solid blue;
+  display: block;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background: #00203a;
+  border: none;
+  margin: 5px 0;
+}
+.text-review .wrapper-school {
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-review .wrapper-school .school-item {
+  width: 33.3333333333%;
+}
+.text-review .wrapper-school .school-item a {
+  font-weight: bold;
+  color: white;
+}
+.text-review .wrapper-school .school-item a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #55b3d9;
+}
+
+.list-docx {
+  list-style-type: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+.list-docx li {
+  width: 32.2580645161%;
+  height: 500px;
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.list-docx li iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.list-docx li span a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #cef806;
+  white-space: nowrap;
+}
+
+#content .list-game {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#content .list-game li {
+  flex: 0 0 32.2580645161%;
+  background: #033f63;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#content .list-game li a {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap; /* Ngăn chữ xuống dòng khi vượt quá chiều rộng */
+  overflow: hidden; /* Ẩn phần dư thừa */
+  text-overflow: ellipsis;
+}
+#content .list-game li a img {
+  display: block;
+  width: 100%;
+}
+#content .span-Game {
+  margin-top: 10px;
+  height: 500px;
+}
+#content .span-Game iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #content .list-game {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  #content .list-game li {
+    width: 100%;
+    margin: 5px 0;
+    background: #033f63;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  #content .list-game li a {
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  #content .list-game li a img {
+    display: block;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .list-docx {
+    list-style-type: none !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .list-docx li {
+    width: 100%;
+    height: 500px;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .list-docx li iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .list-docx li span a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: #cef806;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

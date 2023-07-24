@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">công nghiệp của bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                <span class="txt-review-title">
+                    1. Khai thác dầu khí
+                </span>
+                -Tỉnh BR-VT có chiều dài bờ biển hơn 305km, trên 100.000km2 thềm lục địa với trữ lượng khoảng 400 triệu
+                m3 dầu (chiếm 93,29% trữ lượng cả nước) và khoảng trên 100 tỉ m3 khí (chiếm 16,2% trữ lượng cả nước), là
+                tỉnh đứng đầu cả nước về lĩnh vực khai thác dầu khí, bên cạnh các thế mạnh khác như vận tải hàng hải,
+                dịch vụ du lịch và khai thác hải sản…
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/daukhi.jpg" alt="">
+                </span>
+                -Sự ra đời và phát triển của các doanh nghiệp dầu khí gắn liền với quá trình hình thành và phát triển
+                ngành công nghiệp dầu khí ở Đặc khu Vũng Tàu - Côn Đảo trước đây, tỉnh BR-VT ngày nay. Hoạt động dầu khí
+                đã có tác động lan tỏa mạnh mẽ, tạo điều kiện thúc đẩy kinh tế - xã hội BR-VT phát triển không ngừng.
+                <br>
+
+                -Hiện nay, ở BR-VT đã hình thành và phát triển ngành năng lượng, đạm - hóa chất, công nghiệp khí đốt,
+                sản xuất và cung ứng hóa phẩm dầu khí, đóng mới giàn khoan, sửa chữa tàu biển, dịch vụ cảng biển và kho
+                bãi...
+                <br>
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/daukhi1.jpg" alt="">
+                </span>
+                -Một số doanh nghiệp dầu khí đã đóng góp đáng kể vào tỷ lệ gia tăng giá trị công nghiệp và dịch vụ của
+                BR-VT :
+                <br>
+                + Liên doanh Việt - Nga Vietsovpetro
+                <br>
+                + Tổng công ty Khí Việt Nam - CTCP (PV GAS)
+                <br>
+                + Tổng công ty CP Dịch vụ Kỹ thuật Dầu khí (PTSC)
+                <br>
+                + Tổng công ty CP Khoan và Dịch vụ khoan Dầu khí (PV Drilling)
+                <br>
+                + Nhà máy Đạm Phú Mỹ
+                <br>
+                + Công ty CP Chế tạo giàn khoan Dầu khí (PV Shipyard)
+                <br>
+                - Đây là những nhân tố quan trọng đưa BR-VT trở thành tỉnh có quy mô kinh tế lớn trong vùng.
+                <br>
+                <span class="txt-review-title">
+                    2. Công nghiệp đóng tàu thuyền
+
+                </span>
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/dongtau1.jpg" alt="">
+                </span>
+                - Mặc dù thị trường đóng tàu trong nước cũng như thế giới đang trải qua những gia đoạn trầm lắng nhất,
+                số lượng đóng mới cũng như sửa chữa sụt giảm nghiệm trọng do ảnh hưởng của kinh tế thế giới, nhưng vẫn
+                còn nhiều cơ hội tích cực cho thị trường đóng tàu Việt Nam. Với những tiềm năng sẵn có và đặc biệt là
+                chính sách từ chính phủ thông qua chiến lược phát triển bền vững kinh tế biển Việt Nam đến năm 2030, tầm
+                nhìn đến năm 2045 đang mở ra cho Việt Nam nhiều cơ hội phát triển thị trường nội địa cũng như mở rộng
+                hợp tác với các cường quốc đóng tàu trên thế giới.
+                <br>
+                - Để phát triển lâu dài và ổn định ngành công nghiệp đóng tàu, các dự án phải cam kết và chứng minh được
+                những biện pháp tối ưu để bảo vệ môi trường. Tỉnh và các ban ngành luôn tạo mọi điều kiện thuận lợi để
+                các nhà đầu tư trong và ngoài nước làm ăn hiệu quả khi đầu tư phát triển ngành công nghiệp đóng tàu tại
+                Bà Rịa - Vũng Tàu
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/dongtau.jpg" alt="">
+                </span>
+
+                - Một số doanh nghiệp đóng tàu tại tỉnh BR-VT:
+                <br>
+
+                + Công Ty TNHH Dịch Vụ Hàng Hải Trí Tín
+                ( Số 973 Đường 30/4, Phường 11, Thành Phố Vũng Tàu )
+                <br>
+
+                + Sửa Chữa Tàu Biển VMP - Công Ty CP Sửa Chữa Tàu Biển Gia Công Cơ Khí Vũ Minh Phong
+                (Số 973 Đường 30/4, Phường 11, Thành Phố Vũng Tàu )
+                <br>
+
+                +Chi Nhánh Tổng Công Ty Ba Son - Công Ty TNHH MTV
+                ( 98 Nguyễn Thiện Thuật, P. Thắng Nhất, TP. Vũng Tàu )
+                <br>
+                +Công Ty TNHH Đầu Tư Châu Anh H&T
+                ( Tổ 19, Khu Phố Tân Hạnh, Phường Phú Mỹ, Thị Xã Phú Mỹ )
+                <br>
+                <span class="txt-review-title">
+                    3. Công nghiệp hóa chất
+
+                </span>
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/hoachat.jpg" alt="">
+                </span>
+                - Hội tụ nhiều lợi thế trong phát triển cụm ngành công nghiệp hóa chất bao trùm và bền vững, Bà Rịa -
+                Vũng Tàu đang khai thác tối đa tiềm năng, đẩy mạnh thu hút nhiều “đại bàng” ngành hóa chất trong và
+                ngoài nước đến đầu tư các dự án quy mô lớn, hiện đại, an toàn theo hướng hóa học xanh và kinh tế tuần
+                hoàn.
+                <br>
+                - Công nghiệp hóa chất là một trong những ngành kinh tế quan trọng đóng góp vào tăng trưởng công nghiệp
+                chế biến, chế tạo của tỉnh Bà Rịa - Vũng Tàu 10 năm qua, chỉ xếp sau 2 ngành chế biến nông lâm thủy sản
+                và luyện kim. Quan điểm của tỉnh là hình thành Khu Công nghiệp hóa chất chuyên sâu, các tổ hợp công
+                nghiệp hóa chất với quy mô lớn hiện đại, an toàn theo hướng hóa học xanh và kinh tế tuần hoàn. Tạp chí
+                Công Thương vừa có cuộc trao đổi với ông Nguyễn Văn Đồng - Giám đốc Sở Công Thương tỉnh Bà Rịa - Vũng
+                Tàu về vấn đề này.
+                <br>
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/hoachat1.jpg" alt="">
+                </span>
+                - Một số doanh nghiệp nổi bật tại BR-VT :
+                <br>
+                + Công Ty CP Việt Mỹ Vũng Tàu
+                (Số Nhà 46-48 Lê Duẩn, P. Phước Trung, TP. Bà Rịa)
+                <br>
+
+                +Hóa Chất Quang Ngọc Diệp - Công Ty TNHH Quang Ngọc Diệp
+                (Tổ 6, KP. Phước Hưng, P. Mỹ Xuân, TX. Phú Mỹ)
+                <br>
+
+                +Thuận Phong - Công Ty TNHH Thuận Phong
+                (159 Bình Giã, P. 8, Tp. Vũng Tàu)
+                <br>
+
+                +Công Ty TNHH Phát Thịnh
+                (78 Phạm Hồng Thái, P. 7, Tp. Vũng Tàu)
+                <br>
+
+                +Công Ty TNHH SX TM DV Tân Thành Phát
+                (QL 51 Phước Hưng, Xã Mỹ Xuân, Huyện Tân Thành)
+                <span class="txt-review-title">
+                    4. Công nghiệp chế biến thủy hải sản
+                </span>
+                - Bà Rịa-Vũng Tàu là tỉnh ven biển, với lợi thế diện tích mặt nước lớn, rất thích hợp cho việc nuôi
+                trồng thủy sản có giá trị kinh tế cao. Những năm qua, phát triển ngành nuôi trồng thủy sản không chỉ có
+                khả năng tạo ra đột phá kinh tế, góp phần tạo nguồn cung nguyên liệu ổn định cho xuất khẩu thủy sản, mà
+                còn giúp giảm áp lực trong khai thác thủy sản xa bờ.
+                
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/thuyhaisan.jpg" alt="">
+                </span>
+                - Trong những năm qua, nghề nuôi trồng thủy sản trên địa bàn tỉnh Bà Rịa-Vũng Tàu đã tăng lên nhanh
+                chóng. Cụ thể, nếu như năm 1991 diện tích nuôi trồng thủy sản trên địa bàn tỉnh chưa tới 2.000 ha, thì
+                đến nay diện tích nuôi đã đạt hơn 7.200 ha. Trong số đó, 4.492 ha nuôi thủy sản nước mặn và nước lợ, với
+                sản lượng đạt hơn 11.000 tấn/năm, còn lại là nuôi nước ngọt. Giá trị sản phẩm bình quân trên 1 ha mặt
+                nước nuôi trồng thủy sản năm 2020 ước đạt 214 triệu đồng, gấp 2 lần so với năm 2010.
+                <br>
+                - Trên địa bàn tỉnh hiện có 121 doanh nghiệp và 268 cơ sở sản xuất nhỏ lẻ hoạt động sơ chế, chế biến
+                thủy sản với tổng công suất trung bình 250.000 tấn thành phẩm/năm. Các mặt hàng chế biến chủ yếu như: cá
+                biển, mực, bạch tuộc, cua ghẹ đông lạnh, surimi, seafood mix (từ mực, bạch tuộc, tôm), thủy sản khổ,
+                nước mắm, bột cá. Trong đó, thủy sản đông lạnh chiếm 74% về giá trị sản xuất và kim ngạch xuất khẩu của
+                ngành, hàng khô chiếm 20%, còn lại là bột cá và nước mắm. Kim ngạch xuất khẩu đạt 350 triệu USD/năm,
+                đứng thức 3 trên tổng kim ngạch xuất khẩu các mặt hàng của tỉnh.
+                <br>
+
+                <span class="img-item">
+                    <img src="./../../Img/congnghiep/thuyhaisan1.jpg" alt="">
+                </span>
+                - Các doanh nghiệp nổi bật tỉnh BR-VT:
+                <br>
+                +Công Ty TNHH Chế Biến Thủy Sản Đức Danh
+                (Tổ 27, Ấp Phước Lâm, Xã Phước Hưng, Huyện Long Điền)
+                <br>
+                +Thủy Sản Hòa Thắng - Công Ty TNHH Thủy Sản Hòa Thắng
+                (Khu Chế Biến Hải Sản Tập Trung, Ấp An Hải, X. Lộc An, H. Đất Đỏ)
+                <br>
+                +Baseafood - Công Ty CP Chế Biến XNK Thủy Sản Tỉnh Bà Rịa Vũng Tàu
+                (Số 2, Trưng Trắc, P. 1, TP. Vũng Tàu)
+                <br>
+                +Công Ty TNHH DIAMOND AGE
+                (1743 Võ Nguyên Giáp, P. 12, TP. Vũng Tàu)
+                <br>
+                +Công Ty TNHH Ngọc Tùng
+                (1589 Đường 30 Tháng 4, P. 12, TP. Vũng Tàu)
+                <br>
+                +Chả Mực Hạ Long Khang Duy
+                (285 Nguyễn An Ninh, P. Thắng Nhì, TP. Vũng Tàu)
+                <br>
+                +Công Ty Cổ Phần Thủy Sản Và Xuất Nhập Khẩu Côn Đảo (COIMEX)
+                (Số 40 Lê Hồng Phong, P. 4, Tp. Vũng Tàu)
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

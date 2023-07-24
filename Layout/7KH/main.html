@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">khí hậu của bà rịa - vũng tàu </h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                Bà Rịa - Vũng Tàu là một tỉnh ven biển thuộc vùng Đông Nam Bộ, Việt Nam. Khí hậu của tỉnh Bà Rịa - Vũng
+                Tàu mang tính chất nhiệt đới gió mùa, với hai mùa rõ rệt: mùa mưa và mùa khô.
+                <br>
+                <span class="txt-review-title" style="display: inline-block">
+                    • Mùa mưa:
+                </span>
+                kéo dài từ tháng 5 đến tháng 10, với lượng mưa trung bình từ 1.500 đến 2.000 mm. Mùa mưa
+                thường có mưa lớn và kéo dài, có thể gây ra lũ lụt và ngập úng.
+                <br>
+                o Mưa lớn nhất trong năm thường tập trung vào tháng 9 và tháng 10.
+                <br>
+                o Các tháng có mưa nhiều nhất là tháng 9, tháng 10, tháng 8, tháng 7, tháng 6 và tháng 5.
+                <br>
+                o Các tháng có mưa ít nhất là tháng 11, tháng 12, tháng 1, tháng 2 và tháng 3.
+                <br>
+                <span class="txt-review-title" style="display: inline-block">
+                    • Mùa khô:
+                </span>
+                kéo dài từ tháng 11 đến tháng 4, với lượng mưa trung bình từ 500 đến 1.000 mm. Mùa khô thường
+                có nắng nhiều, nhiệt độ cao và ít mưa.
+                <br>
+                o Nhiệt độ cao nhất trong năm thường tập trung vào tháng 4 và tháng 5.
+                <br>
+                o Các tháng có nhiệt độ cao nhất là tháng 4, tháng 5, tháng 6, tháng 7 và tháng 8.
+                <br>
+                o Các tháng có nhiệt độ thấp nhất là tháng 11, tháng 12, tháng 1, tháng 2 và tháng 3.
+                <br>
+                Nhiệt độ trung bình của tỉnh Bà Rịa - Vũng Tàu là 27°C. Nhiệt độ cao nhất có thể lên tới 39°C, nhiệt độ
+                thấp nhất có thể xuống tới 18°C.
+                <br>
+                Độ ẩm trung bình của tỉnh Bà Rịa - Vũng Tàu là 80%. Độ ẩm cao có thể gây ra cảm giác khó chịu và ngột
+                ngạt.
+                <br>
+                Gió mùa Tây Nam thổi từ tháng 5 đến tháng 10, mang theo mưa và độ ẩm cao. Gió mùa Đông Bắc thổi từ tháng
+                11 đến tháng 4, mang theo thời tiết khô ráo và mát mẻ.
+                Khí hậu của tỉnh Bà Rịa - Vũng Tàu thuận lợi cho việc phát triển các loại cây trồng nhiệt đới, đặc biệt
+                là cây ăn trái. Khí hậu cũng thuận lợi cho việc phát triển du lịch, đặc biệt là du lịch biển.
+                <span class="txt-review-title" style="text-align: center;">
+                    Dưới đây là bảng tổng hợp về khí hậu của tỉnh Bà Rịa - Vũng Tàu:
+                </span>
+          
+                <table>
+                    <tr>
+                        <th>Tháng</th>
+                        <th>Mùa</th>
+                        <th>Lượng mưa trung bình (mm)</th>
+                        <th>Nhiệt độ trung bình (°C)</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Mùa khô</td>
+                        <td>500</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mùa khô</td>
+                        <td>500</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mùa khô</td>
+                        <td>500</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mùa khô</td>
+                        <td>600</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mùa mưa</td>
+                        <td>1000</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mùa mưa</td>
+                        <td>1200</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Mùa mưa</td>
+                        <td>1500</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mùa mưa</td>
+                        <td>1700</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Mùa mưa</td>
+                        <td>1800</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Mùa mưa</td>
+                        <td>1500</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Mùa khô</td>
+                        <td>700</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Mùa khô</td>
+                        <td>600</td>
+                        <td>32</td>
+                    </tr>
+                </table>
+
+            </p>
+            
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 10px auto;
+        margin-top: 0;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        text-transform: uppercase;
+        background-color: #f2f2f2;
+    }
+</style>
+
+</html>

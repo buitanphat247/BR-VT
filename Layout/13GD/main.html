@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">giáo dục bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                - Khi mới thành lập vào năm 1991, hệ thống trường lớp của tỉnh Bà Rịa - Vũng Tàu thiếu thốn đủ thứ. Lúc
+                ấy, một số cơ sở giáo dục mầm non, tiểu học phải học nhờ ở nhà dân, nhà chùa, các nhà thờ. Học sinh chủ
+                yếu học "chay" mà không có thiết bị thí nghiệm, thực hành. Học trò trên địa bàn phải đi học ca ba, đi
+                học xa nhà, học ghép...
+                <br>
+                - Sau 30 năm thành lập, đến nay có thể khẳng định, Bà Rịa - Vũng Tàu là địa phương thuộc nhóm các tỉnh,
+                thành có hệ thống trường học khang trang, hiện đại với hơn 60% trường đạt chuẩn quốc gia. Ngành giáo dục
+                của tỉnh này đã vươn lên gặt hái nhiều thành tựu xuất sắc.
+                Để tạo điều kiện phát triển con người, nâng cao chất lượng và hạnh phúc của người dân, từ khi được thành
+                lập, tỉnh Bà Rịa - Vũng Tàu đã ưu tiên đầu tư cho giáo dục. Cụ thể, hàng năm, ngân sách chi cho ngành
+                giáo dục của tỉnh chiếm trên 20% tổng chi ngân sách.
+                <br>
+                - "Trong 30 năm qua, tỉnh đã ưu tiên đầu tư hàng chục ngàn tỉ đồng từ ngân sách để xây dựng cơ sở vật
+                chất, mua sắm trang thiết bị dạy học cho ngành giáo dục. Đồng thời, huy động các tổ chức và cá nhân khác
+                đầu tư theo chủ trương xã hội hóa. Có thể nói Bà Rịa - Vũng Tàu là một trong những địa phương đi đầu cả
+                nước về xây dựng, kiên cố hóa hệ thống trường học, đồng thời trang bị mua sắm các thiết bị dạy học đáp
+                ứng cho yêu cầu phát triển giáo dục - đào tạo theo hướng toàn diện, tiêu chuẩn hóa, hiện đại hóa", bà
+                Trần Thị Ngọc Châu, giám đốc sở Giáo dục và đào tạo tỉnh Bà Rịa - Vũng Tàu cho biết.
+
+                <span class="wrapper-school">
+                    <span class="one school-item">
+                        <span class="txt-review-title">
+                            Trường cấp 1
+                        </span>
+                        <a href="http://thbausenvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">1. Tiểu học
+                            Bàu Sen</a>
+                        <br>
+                        <a href="http://thnguyenvietxuanvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">2.
+                            Tiểu học Nguyễn Viết Xuân</a>
+                        <br>
+                        <a href="http://thlongson1vt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">3. Tiểu học
+                            Tiểu học Long Sơn 1</a>
+                        <br>
+                        <a href="http://thlongson2vt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">4. Tiểu học
+                            Tiểu học Long Sơn 2</a>
+                        <br>
+                        <a href="http://thphuocthangvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">5. Tiểu
+                            học Phước Thắng</a>
+                        <br>
+                        <a href="http://thchilinhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">6. Tiểu học
+                            Chí Linh</a>
+                        <br>
+                        <a href="http://thhalongvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">7. Tiểu học
+                            Hạ Long</a>
+                        <br>
+                        <a href="http://thtrungvuongvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">8. Tiểu
+                            học
+                            Trưng Vương</a>
+                        <br>
+                        <a href="http://thhoabinhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">9. Tiểu học
+                            Hòa Bình</a>
+                        <br>
+                        <a href="http://ththangnhatvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">10. Tiểu
+                            học Thắng Nhất</a>
+                        <br>
+                        <a href="http://ththangnhivt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer"> 11. Tiểu
+                            học Thắng Nhì</a>
+                        <br>
+                        <a href="http://thtruongcongdinhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer"> 12.
+                            Tiểu học Trương Công Định</a>
+
+                        <br>
+                        <a href="http://thdoanketvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">13. Tiểu học
+                            Đoàn Kết</a>
+                        <br>
+                        <a href="http://thbuithixuanvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">14. Tiểu
+                            học Bùi Thị Xuân</a>
+                        <br>
+                        <a href="http://thnguyenthaihocvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">15.
+                            Tiểu học Nguyễn Thái Học</a>
+                        <br>
+                        <a href="http://ththangtam.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">16. Tiểu học
+                            Thắng Tam</a>
+                        <br>
+                        <a href="http://thquangtrungvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">17. Tiểu
+                            học Quang Trung</a>
+                        <br>
+                        <a href="https://www.vps.edu.vn/" target="_blank" rel="noopener noreferrer">18. Tiểu học Song
+                            Ngữ</a>
+                        <br>
+                        <a href="http://thleloivt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">19. Tiểu học
+                            Lê Lợi</a>
+                        <br>
+                        <a href="http://thhainamvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">20. Tiểu học
+                            Hải Nam</a>
+                        <br>
+                        <a href="http://http://thbinhminhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">21.
+                            Tiểu học Bình Minh
+                        </a> <br>
+                        <a href="https://vaschools.edu.vn/vaschools-vung-tau-co-co-so-truong-moi-tai-95-ly-thuong-kiet-phuong-1/"
+                            target="_blank" rel="noopener noreferrer">22. Tiểu học Việt Mỹ</a>
+                    </span>
+                    <span class="two school-item">
+                        <span class="txt-review-title">
+                            Trường cấp 2
+                        </span>
+                        <a href="http://thcsphuocthangvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            1. THCS Phước Thắng
+
+                        </a>
+                        <br>
+                        <a href="http://thcsngosilienvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            2. THCS Ngô Sĩ Liên
+                        </a>
+                        <br>
+                        <a href="http://thcsthangnhatvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            3. THCS Thắng Nhất
+                        </a>
+                        <br>
+                        <a href="http://thcsvotruongtoanvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            4. THCS Võ Trường Toản
+                        </a>
+                        <br>
+                        <a href="http://thcshuynhkhuongninhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            5. THCS Huỳnh Khương Ninh
+                        </a>
+                        <br>
+                        <a href="http://thcsthangnhivt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            6. THCS Thắng nhì
+                        </a>
+                        <br>
+                        <a href="http://thcstranphuvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            7. THCS Trần Phú
+                        </a>
+                        <br>
+                        <a href="http://thcsduytanvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            8. THCS Duy Tân
+                        </a>
+                        <br>
+                        <a href="http://thcsnguyenvanlinhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            9. THCS Nguyễn Văn Linh
+                        </a>
+                        <br>
+                        <a href="http://thcschauthanhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            10. THCS Châu Thành
+                        </a>
+                        <br>
+                        <a href="http://thcsvungtau.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            11. THCS Vũng Tàu
+                        </a>
+                        <br>
+                        <a href="http://thcsnguyenanninhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            12. THCS Nguyễn An Ninh
+                        </a>
+                        <br>
+                        <a href="http://thcsnguyenthaibinhvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            13. THCS Nguyễn Thái Bình
+                        </a>
+                        <br>
+                        <a href="http://thcsbachdangvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            14. THCS Bạch Đằng
+                        </a>
+                        <br>
+                        <a href="http://thcsvovankietvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            15. THCS Võ Văn Kiệt
+
+                        </a>
+                        <br>
+                        <a href="http://thcsnguyengiathieuvt.brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            16. THCS Nguyễn Gia Thiều
+                        </a>
+                    </span>
+                    <span class="three school-item">
+                        <span class="txt-review-title">
+                            Trường cấp 3
+
+                        </span>
+                        <a href="http://thpt-lequydon.bariavungtau.edu.vn/Default.aspx?sname=THPTLeQuiDon&sid=116&pageid=1992"
+                            target="_blank" rel="noopener noreferrer">
+                            1. THPT chuyên Lê Quý Đôn
+                        </a>
+                        <br>
+                        <a href="https://thpt-vungtau.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            2. THPT Vũng Tàu
+
+                        </a>
+                        <br>
+                        <a href="http://thpt-dinhtienhoang.bariavungtau.edu.vn/Default.aspx?sname=THPTDinhTienHoang&sid=150&pageid=2358"
+                            target="_blank" rel="noopener noreferrer">
+                            3. THPT Đinh Tiên Hoàng
+                        </a>
+                        <br>
+                        <a href="http://thpt-trannguyenhan-vungtau.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            4. THPT Trần Nguyên Hãn
+                        </a>
+                        <br>
+                        <a href="http://thpt-nguyenkhuyen.bariavungtau.edu.vn/Default.aspx?sname=THPTNguyenKhuyen&sid=222&pageid=3737"
+                            target="_blank" rel="noopener noreferrer">
+                            5. THPT Nguyễn Khuyến
+                        </a>
+                        <br>
+                        <a href="https://www.thpt-chauthanh-brvt.edu.vn/" target="_blank" rel="noopener noreferrer">
+                            6. THPT Châu Thành
+
+                        </a>
+                        <br>
+                        <a href="http://thpt-nguyenhue.bariavungtau.edu.vn/Default.aspx?sname=THPTNguyenHue&sid=203&pageid=3490"
+                            target="_blank" rel="noopener noreferrer">
+                            7. THPT Nguyễn Huệ
+                        </a>
+
+
+                    </span>
+                </span>
+
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

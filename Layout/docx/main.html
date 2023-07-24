@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="./../header/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">tài liệu giáo dục địa phương</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+
+                - Tài liệu Giáo dục Địa phương là một nguồn tài nguyên quan trọng trong lĩnh vực giáo dục, tập trung vào
+                việc cung cấp kiến thức và thông tin về địa phương, văn hóa, và cộng đồng tại một khu vực cụ thể. Đây là
+                những tài liệu được xây dựng và thiết kế đặc biệt để đáp ứng nhu cầu giáo dục địa phương của học sinh,
+                giáo
+                viên, và những người tham gia quá trình học tập.
+                <br>
+                - Tài liệu Giáo dục Địa phương đưa ra các tư duy, kiến thức và giá trị có nguồn gốc từ cộng đồng và môi
+                trường xung quanh. Nó nhấn mạnh vào việc liên kết giáo dục với thực tế sống, giúp học sinh hiểu rõ hơn
+                về
+                văn hóa, lịch sử, địa lý, kinh tế và các yếu tố khác của địa phương mình.
+                <br>
+                - Các đặc điểm của Tài liệu Giáo dục Địa phương thường bao gồm:
+                <br>
+                - Thích ứng với ngữ cảnh địa phương: Tài liệu này được viết và tùy chỉnh sao cho phù hợp với vùng đất cụ
+                thể,
+                ngôn ngữ, văn hóa, và truyền thống địa phương. Điều này giúp học sinh dễ dàng tiếp thu và áp dụng kiến
+                thức
+                vào thực tế cuộc sống hàng ngày.
+                <br>
+                - Đa dạng và phong phú: Tài liệu giáo dục địa phương đưa ra nhiều nguồn thông tin phong phú, bao gồm
+                hình
+                ảnh, bản đồ, câu chuyện dân gian, các tài liệu lịch sử và các tài liệu tham khảo khác, giúp tăng cường
+                sự
+                hấp dẫn và tính tương tác trong quá trình học tập.
+                <br>
+                - Hỗ trợ phát triển văn hóa và nhận thức xã hội: Tài liệu này không chỉ giúp học sinh hiểu về địa phương
+                mà
+                còn khơi dậy tinh thần tự hào về văn hóa, truyền thống và lịch sử của cộng đồng. Nó cũng thúc đẩy nhận
+                thức
+                xã hội và trách nhiệm đối với việc bảo vệ và phát triển bền vững của địa phương.
+                <br>
+                - Liên kết với giáo dục chính thống: Tài liệu Giáo dục Địa phương không hoàn toàn thay thế chương trình
+                giáo
+                dục chính thống mà thay vào đó là một phần bổ sung và hỗ trợ quan trọng. Nó giúp mở rộng phạm vi kiến
+                thức
+                và làm cho việc học trở nên thú vị và gần gũi hơn đối với học sinh.
+                <br>
+                - Tổng kết, Tài liệu Giáo dục Địa phương đóng vai trò quan trọng trong việc xây dựng môi trường học tập
+                phong
+                phú và đa chiều, giúp học sinh hiểu và kết nối sâu hơn với thế giới xung quanh, từ đó đóng góp vào sự
+                phát
+                triển toàn diện của họ trong cả khía cạnh văn hóa, xã hội và trí tuệ.
+                <span class="txt-review-title text-center">
+                    <i class="fa-solid fa-right-long"></i> download các tài liệu cần thiết dưới đây
+                </span>
+            <ul class="list-docx">
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/3 - BA RIA VUNG TAU 10 - FULL - 1 - 2 -2023 (15h30) giao duc dia phuong brvt.pdf"
+                            download>
+                            sách giáo dục địa phương
+                        </a>
+                    </span>
+
+                    <iframe
+                        src="./document/3 - BA RIA VUNG TAU 10 - FULL - 1 - 2 -2023 (15h30) giao duc dia phuong brvt.pdf"
+                        frameborder="0">
+                    </iframe>
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/Chủ đề 1.pdf" download>
+                            di sản văn hóa
+                        </a>
+                    </span>
+                    <iframe src="./document/Chủ đề 1.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/Chủ đề 2.pdf" download>
+                            biến đổi khí hậu
+                        </a>
+                    </span>
+                    <iframe src="./document/Chủ đề 2.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/Chủ đề 4.pdf" download>
+                            Nghệ nhân, nhạc sĩ bà rịa vũng tàu
+                        </a>
+                    </span>
+                    <iframe src="./document/Chủ đề 4.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/GDĐP chủ đề 1.pdf" download>
+                            di tích lịch sử
+                        </a>
+                    </span>
+                    <iframe src="./document/GDĐP chủ đề 1.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/GDĐP chủ đề 2.pdf" download>
+                            giải pháp ứng phó biến đổi khí hậu
+                        </a>
+                    </span>
+                    <iframe src="./document/GDĐP chủ đề 2.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+                <li class="list-docx-item">
+                    <span class="txt-review-title">
+                        <a href="./document/GDĐP chủ đề 3.pdf" download>
+                            Danh lam thắng cảnh
+                        </a>
+                    </span>
+                    <iframe src="./document/GDĐP chủ đề 3.pdf" frameborder="0">
+                    </iframe>
+
+                </li>
+
+            </ul>
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

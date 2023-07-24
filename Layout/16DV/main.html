@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./../../CSS/base.css" />
+    <link rel="stylesheet" href="./../../CSS/reset.css" />
+    <link rel="stylesheet" href="./../../CSS/main.css" />
+    <link rel="stylesheet" href="./../../Forms/header/main.css">
+    <link rel="stylesheet" href="./../../Forms/List_item/main.css">
+    <link rel="stylesheet" href="./../../Forms/nav/main.css">
+    <link rel="stylesheet" href="./../TEXT_CSS/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/includeHTML/1.0.0/includeHTML.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="./../../logo.jpg" type="image/x-icon">
+    <title>Bà Rịa - Vũng Tàu Tôi Yêu</title>
+</head>
+
+<body>
+    <div id="headerContainer">
+    </div>
+    <script>
+        fetch('./../header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('#headerContainer').innerHTML = data;
+                const headerScripts = document.querySelectorAll('#headerContainer script');
+                headerScripts.forEach(script => {
+                    eval(script.innerText); // Chạy script của header
+                });
+            });
+    </script>
+    <div id="container">
+        <div id="navbar">
+            <script>
+                fetch('./../../Forms/nav/nav.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#navbar').innerHTML = data;
+                        const headerScripts = document.querySelectorAll('#navbar script');
+                        headerScripts.forEach(script => {
+                            eval(script.innerText); // Chạy script của header
+                        });
+                    });
+            </script>
+        </div>
+        <div class="demoslide slider-container">
+            <img src="./../../banner.png" alt="">
+        </div>
+        <script>
+            const value_padding = parseInt(
+                localStorage.getItem("nav_height")) + 'px';
+            console.log(value_padding);
+            $(".demoslide").css({
+                paddingTop: value_padding,
+            });
+        </script>
+        <h1 class="tile-split">dịch vụ của bà rịa - vũng tàu</h1>
+        <div class="container-item" id="content">
+            <p class="text-review">
+                <span class="txt-review-title" style="display: inline-block">
+                    1. Du lịch và lưu trú tại Bà Rịa - Vũng Tàu:</span>
+                là một trong những ngành kinh tế tiềm năng phát triển mạnh mẽ của tỉnh này. Với vị trí gần TP.HCM, cùng
+                với nhiều điểm du lịch nổi tiếng và đẹp tự nhiên, Bà Rịa - Vũng Tàu đã thu hút một lượng lớn khách du
+                lịch cả trong và ngoài nước. Dưới đây là một số chi tiết về du lịch và lưu trú tại Bà Rịa - Vũng Tàu:
+                <br>
+                - Điểm du lịch nổi tiếng: Bà Rịa - Vũng Tàu có nhiều điểm đến hấp dẫn như:
+                <br>
+                - Biển Vũng Tàu: Bãi biển du lịch nổi tiếng với cát mịn và nước biển trong xanh. Các bãi biển phổ biến
+                như Bãi Trước, Bãi Dứa, Bãi Dâu và Bãi Dứơi.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/dulich.jpg" alt="">
+                </span>
+                - Côn Đảo: Hòn đảo nổi tiếng với thiên nhiên hoang sơ, biển xanh và bãi biển tuyệt đẹp. Côn Đảo cũng có
+                lịch sử liên quan đến nhà tù Côn Đảo và là nơi linh thiêng trong lòng người dân.
+                <br>
+                - Hồ Cốc: Khu du lịch sinh thái với cảnh quan hữu tình, hồ nước xanh ngọc và những khu vườn trái cây.
+                <br>
+                - Long Hải: Nằm cách thành phố Vũng Tàu khoảng 30km về phía Đông Bắc, Long Hải có bãi biển dài và hoang
+                sơ, thu hút nhiều du khách ghé thăm.
+                <br>
+                - Khu du lịch biển Hồ Cốc: Với những khu resort sang trọng và các hoạt động giải trí phong phú.
+                <br>
+                - Dịch vụ lưu trú: Bà Rịa - Vũng Tàu có nhiều loại hình lưu trú phong phú từ khách sạn, nhà nghỉ,
+                homestay đến resort cao cấp. Ở đây, du khách có nhiều sự lựa chọn về chất lượng và giá cả để phù hợp với
+                nhu cầu và ngân sách của mình. Các khu vực lưu trú phổ biến là Vũng Tàu, Côn Đảo, Hồ Cốc, Long Hải và
+                các vùng biển lân cận.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/dulich1.jpg" alt="">
+                </span>
+                - Các hoạt động du lịch: Du khách có thể tham gia nhiều hoạt động giải trí và vui chơi tại Bà Rịa - Vũng
+                Tàu như tắm biển, tham quan cảnh đẹp, thưởng thức ẩm thực địa phương, tham quan di tích lịch sử, mạo
+                hiểm thể thao nước và tham gia các chương trình giải trí.
+                <br>
+                - Sự phát triển và đa dạng trong dịch vụ du lịch: Với tầm nhìn chiến lược trong phát triển ngành du
+                lịch, tỉnh Bà Rịa - Vũng Tàu đang mở rộng và đa dạng hoá các dịch vụ du lịch như du lịch sinh thái, du
+                lịch thể thao, du lịch văn hóa và sự kiện, thu hút đối tượng khách hàng đa dạng.
+                <br>
+                <span class="txt-review-title" style="display: inline-block">
+                    2. Dịch vụ hàng hải và cảng biển:
+                </span>
+                tại Bà Rịa - Vũng Tàu đóng vai trò quan trọng trong nền kinh tế của tỉnh này. Với vị trí địa lý thuận
+                lợi, Bà Rịa - Vũng Tàu là một trong những trung tâm cảng biển hàng đầu của Việt Nam, góp phần quan trọng
+                vào hoạt động thương mại, xuất khẩu và vận chuyển hàng hóa.
+                <br>
+                - Cảng biển: Tỉnh Bà Rịa - Vũng Tàu có hai cảng biển quan trọng là cảng Cái Mép - Thị Vải và cảng Vũng
+                Tàu.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/hanghai.jpg" alt="">
+                </span>
+                - Cảng Cái Mép - Thị Vải: Đây là một trong những cảng biển lớn nhất của Việt Nam và cũng là một trong
+                những cảng biển sâu nước nhất châu Á. Cảng này nằm trong khu vực kinh tế cửa khẩu Tân Cảng - Cái Mép và
+                được xem như "cửa ngõ" châu Á - Châu Âu của Việt Nam. Cảng Cái Mép - Thị Vải có khả năng tiếp nhận các
+                tàu lớn, cung cấp dịch vụ hậu cần, vận tải hàng hóa và nhiều dịch vụ liên quan khác.
+                <br>
+                - Cảng Vũng Tàu: Cảng Vũng Tàu nằm tại trung tâm TP.Vũng Tàu và chủ yếu phục vụ cho việc vận chuyển hàng
+                hóa và du khách vào và ra khỏi vùng này. Cảng này cũng đóng vai trò quan trọng trong việc phục vụ các
+                hoạt động du lịch và chế tạo tàu.
+                <br>
+                - Dịch vụ hậu cần và vận tải hàng hóa: Với sự phát triển của cảng Cái Mép - Thị Vải, nhu cầu về các dịch
+                vụ hậu cần như xếp dỡ, bốc xếp, lưu trữ, vận chuyển và giao nhận hàng hóa ngày càng tăng cao. Các doanh
+                nghiệp và cơ sở cung cấp dịch vụ này đang phát triển mạnh mẽ và đáp ứng nhu cầu của khách hàng trong và
+                ngoài nước.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/hanghai1.jpg" alt="">
+                </span>
+                - Dịch vụ liên quan đến hàng hải: Bà Rịa - Vũng Tàu cũng có các dịch vụ liên quan đến hàng hải như dịch
+                vụ hậu cần và sửa chữa tàu, cung cấp nhiên liệu và nước cho tàu biển, cung cấp dịch vụ dịch vụ hải quan
+                và cảnh sát biển, v.v.
+                <br>
+                - Trung tâm đào tạo hàng hải: Với vai trò quan trọng của ngành hàng hải và cảng biển, Bà Rịa - Vũng Tàu
+                cũng có một số trung tâm đào tạo hàng hải để đáp ứng nhu cầu về nguồn nhân lực chất lượng cao cho ngành
+                này.
+                <br>
+                - Tóm lại, dịch vụ hàng hải và cảng biển tại Bà Rịa - Vũng Tàu đóng vai trò quan trọng trong việc phát
+                triển kinh tế của tỉnh và đóng góp vào hệ thống giao thông biển quốc tế của Việt Nam. Sự phát triển và
+                đầu tư trong ngành này sẽ tiếp tục thu hút các nhà đầu tư và thúc đẩy sự phát triển bền vững của khu vực
+                này.
+                <br>
+                <span class="txt-review-title" style="display: inline-block">
+                    3. Dịch vụ công nghiệp:
+                </span>
+                - Các khu công nghiệp và khu chế xuất: Bà Rịa - Vũng Tàu là một trong những tỉnh có nhiều khu công
+                nghiệp và khu chế xuất phát triển. Các khu này thu hút nhiều doanh nghiệp, cơ sở sản xuất và công ty đa
+                quốc gia đầu tư vào đây. Các dịch vụ công nghiệp liên quan như sản xuất, gia công, lắp ráp, đóng tàu,
+                bảo trì và sửa chữa máy móc và thiết bị, đóng tàu,... đều phát triển mạnh mẽ.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/congnghiep.jpg" alt="">
+                </span>
+                - Dịch vụ hậu cần và logistics: Với vị trí gần cảng biển Cái Mép - Thị Vải, các dịch vụ hậu cần và
+                logistics có tiềm năng phát triển lớn. Các doanh nghiệp cung cấp dịch vụ lưu trữ, vận chuyển, giao nhận
+                hàng hóa và logistics liên quan đều phát triển và đáp ứng nhu cầu vận chuyển hàng hóa của khu vực.
+                <span class="txt-review-title">
+                    4. Xây dựng:
+                </span>
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/xaydung.jpg" alt="">
+                </span>
+                - Xây dựng hạ tầng: Bà Rịa - Vũng Tàu đang đầu tư mạnh vào phát triển hạ tầng, bao gồm đường bộ, cầu
+                đường, cơ sở hạ tầng công cộng và các dự án giao thông. Điều này đồng thời tạo cơ hội cho các doanh
+                nghiệp xây dựng cung cấp dịch vụ xây dựng cơ bản và cơ sở hạ tầng.
+                <br>
+                - Xây dựng dân dụng và công nghiệp: Với sự phát triển của khu công nghiệp và các dự án công trình lớn,
+                nhu cầu xây dựng các tòa nhà, nhà xưởng, cơ sở sản xuất và cơ sở dịch vụ cũng tăng cao. Các doanh nghiệp
+                xây dựng địa phương và quốc tế có tiềm năng tham gia vào các dự án xây dựng đa dạng và quy mô lớn.
+                <br>
+                - Xây dựng bất động sản: Ngành bất động sản cũng đang phát triển mạnh mẽ trong khu vực này, với nhiều dự
+                án đất nền, căn hộ, biệt thự và khu resort đang được triển khai. Dịch vụ xây dựng bất động sản như thiết
+                kế kiến trúc, xây dựng, sửa chữa và bảo trì cũng có tiềm năng phát triển.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/xaydung1.png" alt="">
+                </span>
+                - Tóm lại, dịch vụ công nghiệp và xây dựng tại Bà Rịa - Vũng Tàu đang phát triển mạnh mẽ, tạo nhiều cơ
+                hội kinh doanh và việc làm cho người dân trong khu vực. Sự phát triển của hai lĩnh vực này cũng góp phần
+                quan trọng vào phát triển kinh tế và hạ tầng của tỉnh.
+                <br>
+                <span class="txt-review-title" style="display: inline-block">
+                    5. Dịch vụ y tế và chăm sóc sức khỏe:
+                </span>
+                
+                - Cơ sở y tế công lập: Tỉnh Bà Rịa - Vũng Tàu có mạng lưới cơ sở y tế công lập gồm bệnh viện, trung tâm
+                y tế và các cơ sở chăm sóc y tế cơ bản tại các huyện và thành phố trong tỉnh. Các cơ sở này đáp ứng nhu
+                cầu chăm sóc y tế cơ bản của người dân, cung cấp các dịch vụ khám bệnh, chữa bệnh, phẫu thuật, cấp cứu,
+                chăm sóc mẹ và bé, tiêm chủng và các dịch vụ y tế khác.
+              
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/yte.jpg" alt="">
+                </span>
+                - Cơ sở y tế tư nhân: Bên cạnh cơ sở y tế công lập, tỉnh cũng có các cơ sở y tế tư nhân, bao gồm bệnh
+                viện, phòng khám, trung tâm chăm sóc sức khỏe cộng đồng và các chuyên khoa khác. Các cơ sở này thường
+                cung cấp các dịch vụ y tế chuyên sâu và tiện ích hơn cho khách hàng.
+                <br>
+                - Chăm sóc sức khỏe cộng đồng: Bà Rịa - Vũng Tàu cũng đang đẩy mạnh phát triển các dịch vụ chăm sóc sức
+                khỏe cộng đồng nhằm cải thiện tình hình sức khỏe cộng đồng, phòng chống bệnh tật và tăng cường kiến thức
+                sức khỏe cho cộng đồng. Các chương trình tiêm chủng, kiểm tra sàng lọc bệnh, chăm sóc sức khỏe thai sản
+                và trẻ sơ sinh, tư vấn dinh dưỡng, và giáo dục sức khỏe đều được triển khai rộng rãi.
+                <br>
+                - Y tế quốc tế: Tỉnh Bà Rịa - Vũng Tàu cũng thu hút nhiều cơ sở y tế quốc tế đầu tư và hoạt động tại
+                đây. Các cơ sở này thường chuyên về các dịch vụ y tế cao cấp, phẫu thuật thẩm mỹ và các dịch vụ chăm sóc
+                sức khỏe chất lượng cao hơn.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/yte1.jpg" alt="">
+                </span>
+                - Công nghệ y tế và dịch vụ trực tuyến: Cùng với sự phát triển của công nghệ thông tin, nhiều cơ sở y tế
+                tại Bà Rịa - Vũng Tàu đã áp dụng các giải pháp công nghệ y tế và dịch vụ trực tuyến để cải thiện tiện
+                ích và chất lượng dịch vụ, như tư vấn trực tuyến, lịch khám online và hồ sơ điện tử.
+                <br>
+                - Tóm lại, dịch vụ y tế và chăm sóc sức khỏe tại Bà Rịa - Vũng Tàu đa dạng và phong phú, đáp ứng nhu cầu
+                chăm sóc sức khỏe cơ bản và cao cấp của người dân trong tỉnh. Sự đầu tư và phát triển trong lĩnh vực này
+                là rất quan trọng để đảm bảo mọi người có quyền tiếp cận và sử dụng các dịch vụ y tế chất lượng cao.
+                <br>
+                <span class="txt-review-title">
+                    6. Dịch vụ giáo dục và đào tạo:
+                </span>
+                • Giáo dục công lập:
+                <br>
+                Trường mầm non: Đáp ứng nhu cầu giáo dục và chăm sóc trẻ em từ 3 - 5 tuổi. Các trường mầm non công lập
+                thường phân bố rộng rãi trong các khu vực đô thị và nông thôn.
+                
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/giaoducdaotao.jpg" alt="">
+                </span>
+                Trường tiểu học: Cung cấp giáo dục cơ bản cho học sinh từ 6 - 11 tuổi. Tỉnh có nhiều trường tiểu học
+                công lập đảm bảo đến trình độ học tập phổ thông.
+                <br>
+                Trường trung học cơ sở và trung học phổ thông: Cung cấp giáo dục trung học cho học sinh từ 12 - 18 tuổi.
+                Các trường công lập cung cấp chương trình học tập đầy đủ từ lớp 6 đến lớp 12.
+                <br>
+                • Giáo dục tư nhân:
+                <br>
+                Trường mầm non, tiểu học và trung học: Bên cạnh giáo dục công lập, tỉnh Bà Rịa - Vũng Tàu cũng có nhiều
+                trường giáo dục tư nhân chất lượng cao, cung cấp các chương trình học tập đa dạng và dịch vụ giáo dục
+                chất lượng.
+                <br>
+                Trường cao đẳng và đại học: Tỉnh có các trường cao đẳng và đại học tư nhân chất lượng, đào tạo các
+                chuyên ngành công nghệ, kinh tế, quản lý, y tế, du lịch, ngoại ngữ và nhiều lĩnh vực khác.
+                <br>
+                • Đào tạo nghề:
+                <br>
+                Trung tâm đào tạo nghề: Tỉnh Bà Rịa - Vũng Tàu cũng chú trọng phát triển đào tạo nghề, cung cấp các khóa
+                học nghề và đào tạo kỹ năng công nghệ cho người lao động, giúp họ nâng cao trình độ chuyên môn và cơ hội
+                việc làm.
+
+                <span class="img-item">
+                    <img src="./../../Img/dichvu/giaoducdaotao1.jpg" alt="">
+                </span>                • Giáo dục và đào tạo trực tuyến:
+                <br>
+                Đào tạo và học tập trực tuyến: Ngành giáo dục và đào tạo cũng đang áp dụng công nghệ thông tin và
+                internet để cung cấp các khóa học và chương trình học trực tuyến, giúp học sinh và sinh viên có thể học
+                tập linh hoạt và tiện lợi.
+                <br>
+                • Phát triển đội ngũ giáo viên:
+                <br>
+                Đào tạo và nâng cao trình độ cho giáo viên: Tỉnh đầu tư vào việc đào tạo và nâng cao trình độ chuyên môn
+                và phương pháp giảng dạy cho giáo viên, đảm bảo chất lượng dạy và học trong các cơ sở giáo dục.
+                <br>
+                Dịch vụ giáo dục và đào tạo tại Bà Rịa - Vũng Tàu đang được đẩy mạnh phát triển và đa dạng hóa, tạo cơ
+                hội học tập và phát triển chuyên môn cho người dân trong tỉnh và các vùng lân cận. Sự đầu tư và phát
+                triển trong lĩnh vực này góp phần quan trọng vào nâng cao trình độ tri thức và chất lượng cuộc sống của
+                người dân.
+
+            </p>
+        </div>
+        <footer id="footer-item">
+        </footer>
+        <script>
+            fetch('./../../Forms/footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('#footer-item').innerHTML = data;
+                    const headerScripts = document.querySelectorAll('#footer-item script');
+                    headerScripts.forEach(script => {
+                        eval(script.innerText); // Chạy script của header
+                    });
+                });
+        </script>
+    </div>
+</body>
+<script type="module" src="./script/main.js"></script>
+
+</html>

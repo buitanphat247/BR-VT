@@ -1,0 +1,73 @@
+.container-list {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container-list li {
+  width: 24.3902439024%;
+  list-style: none;
+  background: #00203a;
+  color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.container-list li h1 {
+  padding: 5px;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container-list li .list-item_IMG img {
+  display: block;
+  width: 100%;
+}
+.container-list li button {
+  display: block;
+  background: none;
+  outline: none;
+  margin: 10px 0px;
+  background: none;
+  border: 0;
+  margin: 5px auto;
+}
+.container-list li button a {
+  background: #033f63;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .container-list li {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+  .container-list li {
+    flex: 0 0 47.619047619%;
+    border-radius: 5px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 800px) {
+  .container-list li {
+    flex: 0 0 47.619047619%;
+    border-radius: 5px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
