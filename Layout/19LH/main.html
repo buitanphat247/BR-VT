@@ -76,6 +76,13 @@
             <p class="text-review">
                 <span class="txt-review-title">
                     1. LỄ HỘI DINH CÔ
+
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/1.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Lễ hội Dinh Cô là một trong những lễ hội truyền thống của người dân tại Vũng Tàu, tỉnh Bà Rịa - Vũng
                 Tàu, Việt Nam. Lễ hội được tổ chức vào ngày 15 tháng Giêng âm lịch hàng năm để tưởng nhớ vị thần nữ Thủy
@@ -101,7 +108,12 @@
                 nghiệm và khám phá.
                 <span class="txt-review-title">
                     2. LỄ HỘI ĐÌNH THẦN THẮNG TAM
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/2.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
                 - Lễ hội Đình Thần Thắng Tam là một trong những lễ hội truyền thống của người dân tại Vũng Tàu, tỉnh Bà
                 Rịa - Vũng Tàu, Việt Nam. Lễ hội được tổ chức vào ngày 5 tháng 5 âm lịch hàng năm, để tôn vinh những
                 công lao của ba vị thần là Thần Thắng Tam.
@@ -126,7 +138,12 @@
                 Vũng Tàu để trải nghiệm và khám phá.
                 <span class="txt-review-title">
                     3. LỄ HỘI MIẾU BÀ NGŨ HÀNH
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/3.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
                 - Lễ hội Miếu Bà Ngũ Hành là một trong những lễ hội truyền thống của người dân tại Vũng Tàu, tỉnh Bà Rịa
                 - Vũng Tàu, Việt Nam. Lễ hội diễn ra vào ngày 15 tháng 1 âm lịch hàng năm để tôn vinh nữ thần Ngũ Hành.
                 <br>
@@ -151,7 +168,12 @@
                 Tàu để trải nghiệm và khám phá.
                 <span class="txt-review-title">
                     4. LỄ HỘI NGHINH ÔNG
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/4.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
                 - Lễ hội Nghinh Ngông là một trong những lễ hội truyền thống của Vũng Tàu, tỉnh Bà Rịa - Vũng Tàu, Việt
                 Nam. Lễ hội diễn ra vào mỗi dịp cuối năm âm lịch, tức vào khoảng tháng 8 hay tháng 9 âm lịch để tôn vinh
                 những vị thần bảo vệ các địa phương.
@@ -176,7 +198,12 @@
                 nghìn du khách đến tham gia và khám phá văn hóa địa phương.
                 <span class="txt-review-title">
                     5. LỄ HỘI TRÙNG CỬU
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/5.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
                 - Lễ hội Trùng Cửu (còn gọi là Lễ hội Thánh Mẫu) là một trong những lễ hội lớn nhất của thành phố Vũng
                 Tàu, tỉnh Bà Rịa - Vũng Tàu, Việt Nam. Lễ hội diễn ra vào ngày 9/9 âm lịch hàng năm để tôn vinh Thánh
                 Mẫu, là vị thần bảo vệ đất nước và nhân dân Việt Nam.
@@ -200,7 +227,12 @@
                 nghìn du khách đến tham gia và khám phá văn hóa địa phương.
                 <span class="txt-review-title">
                     6. LỄ GIỖ ĐỨC THÁNH TRẦN HƯNG ĐẠO
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/6.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
 
                 - Tỉnh Bà Rịa - Vũng Tàu là một trong những tỉnh thuộc miền Nam Việt Nam, nằm ở phía Đông Nam của đất
                 nước. Với vị trí địa lý đặc biệt, Bà Rịa - Vũng Tàu được biết đến là một trong những vùng đất đáng sống
@@ -248,5 +280,32 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
+
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 
 </html>

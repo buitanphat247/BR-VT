@@ -74,6 +74,39 @@
         <h1 class="tile-split">giáo dục bà rịa - vũng tàu</h1>
         <div class="container-item" id="content">
             <p class="text-review">
+                <span class="read_text">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <audio controls class="audio-listen">
+                        <source src="./1.mp3" type="audio/ogg">
+                    </audio>
+                </span>
+                <script>
+                    let currentPlayingAudio = null;
+
+                    // Lặp qua từng audio để gán sự kiện click
+                    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+                        volumeIcon.onclick = function () {
+                            // Lấy element audio liền kề với nút volumeIcon đang được click
+                            const audio = volumeIcon.nextElementSibling;
+
+                            // Kiểm tra xem audio có đang chạy không
+                            if (audio.paused) {
+                                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                                    currentPlayingAudio.pause();
+                                }
+
+                                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                                audio.play();
+                                currentPlayingAudio = audio;
+                            } else {
+                                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                                audio.pause();
+                                currentPlayingAudio = null;
+                            }
+                        };
+                    });
+                </script>
                 - Khi mới thành lập vào năm 1991, hệ thống trường lớp của tỉnh Bà Rịa - Vũng Tàu thiếu thốn đủ thứ. Lúc
                 ấy, một số cơ sở giáo dục mầm non, tiểu học phải học nhờ ở nhà dân, nhà chùa, các nhà thờ. Học sinh chủ
                 yếu học "chay" mà không có thiết bị thí nghiệm, thực hành. Học trò trên địa bàn phải đi học ca ba, đi

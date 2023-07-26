@@ -76,6 +76,12 @@
             <p class="text-review">
                 <span class="txt-review-title">
                     1. Khai thác dầu khí
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/1.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 -Tỉnh BR-VT có chiều dài bờ biển hơn 305km, trên 100.000km2 thềm lục địa với trữ lượng khoảng 400 triệu
                 m3 dầu (chiếm 93,29% trữ lượng cả nước) và khoảng trên 100 tỉ m3 khí (chiếm 16,2% trữ lượng cả nước), là
@@ -116,7 +122,12 @@
                 <br>
                 <span class="txt-review-title">
                     2. Công nghiệp đóng tàu thuyền
-
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/2.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
 
                 <span class="img-item">
@@ -157,7 +168,12 @@
                 <br>
                 <span class="txt-review-title">
                     3. Công nghiệp hóa chất
-
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/3.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
 
                 <span class="img-item">
@@ -201,6 +217,12 @@
                 (QL 51 Phước Hưng, Xã Mỹ Xuân, Huyện Tân Thành)
                 <span class="txt-review-title">
                     4. Công nghiệp chế biến thủy hải sản
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/4.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Bà Rịa-Vũng Tàu là tỉnh ven biển, với lợi thế diện tích mặt nước lớn, rất thích hợp cho việc nuôi
                 trồng thủy sản có giá trị kinh tế cao. Những năm qua, phát triển ngành nuôi trồng thủy sản không chỉ có
@@ -267,5 +289,31 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
 
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 </html>

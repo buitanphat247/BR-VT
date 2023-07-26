@@ -2,7 +2,13 @@
 .text-review {
   padding: 10px;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.5em;
+}
+.text-review .read_text i {
+  cursor: pointer;
+}
+.text-review .read_text audio {
+  display: none;
 }
 .text-review .img-item {
   display: block;
@@ -36,7 +42,7 @@
   outline: none;
 }
 .text-review button a {
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-transform: capitalize;
   padding: 5px 50px;
   border: 1px solid blue;
@@ -198,6 +204,11 @@
     font-weight: bold;
     text-align: center;
     color: #cef806;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .text-review {
+    font-size: 1.2em;
   }
 }
 

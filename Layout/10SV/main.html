@@ -71,9 +71,19 @@
                 paddingTop: value_padding,
             });
         </script>
-        <h1 class="tile-split">Sinh Vật biển của bà rịa - vũng tàu</h1>
+        <h1 class="tile-split">Sinh Vật biển của bà rịa - vũng tàu 
+
+
+            
+        </h1>
         <div class="container-item" id="content">
             <p class="text-review">
+                <span class="read_text">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <audio controls class="audio-listen">
+                        <source src="./audio/1.mp3" type="audio/ogg">
+                    </audio>
+                </span>
                 - Bà Rịa –Vũng Tàu từ lâu đã được biết đến là điểm du lịch nổi tiếng của cả nước, nằm ở khu vực cửa ngõ
                 miền Đông Nam bộ hướng ra biển Đông, liền kề với Thành phố Hồ Chí Minh- trung tâm của vùng kinh tế trọng
                 điểm phía nam với hệ thống giao thông kết nối khá thuận lợi. Đây chính là một điểm mạnh của ngành Du
@@ -165,5 +175,31 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
 
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 </html>

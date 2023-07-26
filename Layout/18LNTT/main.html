@@ -77,6 +77,13 @@
 
                 <span class="txt-review-title">
                     1 Làng cá Phước Hải
+
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/1.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
 
                 - Làng cá Phước Hải nổi tiếng với ngành nghề chính là đánh bắt, chế biến và kinh doanh các loại hải sản
@@ -96,7 +103,12 @@
                 Địa chỉ: thị trấn Phước Hải, huyện Đất Đỏ, tỉnh Bà Rịa – Vũng Tàu
                 <span class="txt-review-title">
                     2 Làng nghề đúc đồng ở Long Điền
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/2.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
 
                 - Làng nghề đúc đồng Long Điền có lịch sử phát triển hơn 200 năm và được biết đến với những sản phẩm đúc
                 đồng đẹp mắt, tinh xảo và chất lượng cao như bình đựng nước, lọ hoa, đĩa trang trí, tượng phật và các đồ
@@ -116,7 +128,12 @@
                 Địa chỉ: trục lộ 55, con đường huyết mạch nối Bà Rịa với thành phố Hồ Chí Minh
                 <span class="txt-review-title">
                     3 Làng nghề làm đá ở Tân Thành
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/3.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
 
                 - Làng nghề làm đá ở Tân Thành tự hào với những nghệ nhân lành nghề, tài hoa và nhiệt tình. Họ đã thực
                 hiện nhiều công trình nổi tiếng với đá như Tượng đài Thống Nhất ở Sài Gòn, các bức tượng đá ở đền Hùng,
@@ -137,7 +154,12 @@
                 Phước và Phước Hòa, huyện Tân Thành, tỉnh BR-VT
                 <span class="txt-review-title">
                     4 Làng bún Long Kiên
-                </span>
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/4.mp3" type="audio/ogg">
+                        </audio>
+                    </span> </span>
 
                 - Làng bún Long Kiên là một điểm đến nổi tiếng của thành phố Vũng Tàu, nằm tại xã Long Điền Đông, huyện
                 Đất Đỏ. Làng nổi tiếng với nghề làm bún đặc sản, là một điểm đến hấp dẫn cho các thực khách yêu thích ẩm
@@ -158,7 +180,12 @@
 
                 <span class="txt-review-title">
                     5 Làng bánh tráng An Ngãi
-
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/5.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Bánh tráng An Ngãi đã quá quen thuộc với người dân Bà Rịa - Vũng Tàu. Đây cũng là làng nghề đầu tiên
                 của tỉnh được công nhận là “Làng nghề truyền thống”.
@@ -180,7 +207,12 @@
                 làm nghề (như máy xay bột, lò tráng điện).
                 <span class="txt-review-title">
                     6 Làng nấu rượu Hòa Long
-
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/6.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Nghề nấu rượu tại xã Hòa Long, thành phố Bà Rịa, tỉnh Bà Rịa – Vũng Tàu có từ những năm 60 của thế kỷ
                 trước, ban đầu chỉ vài hộ, lâu dần được phát triển, lưu giữ qua nhiều thế hệ với những bí quyết rất
@@ -221,5 +253,32 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
+
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 
 </html>

@@ -76,6 +76,14 @@
             <p class="text-review">
                 <span class="txt-review-title">
                     1. Tài nguyên nước
+
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/1.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
+                    
                 </span>
                 - Nguồn nước mặt của Bà Rịa – Vũng Tàu chủ yếu do ba con sông lớn cung cấp, đó là sông Thị Vải, đoạn
                 chảy
@@ -90,6 +98,13 @@
                 hoạt.
                 <span class="txt-review-title">
                     2. Tài nguyên đất
+                    <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/2.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
+
                 </span>
                 - Với diện tích 197.514 ha, chia thành 4 loại: đất rất tốt là loại đất có độ phì rất cao, chiếm 19.60%
                 diện tích tự nhiên, chủ yếu là đất phù sa và đất xám; đất tốt chiếm 26,40%; đất trung bình chiếm 14,4%;
@@ -100,7 +115,12 @@
                 mạnh. Ngoài ra, còn một tỷ trọng lớn đất không thuận lợi cho phát triển nông nghiệp bao gồm đất cát, đất
                 nhiễm phèn, mặn, đất xói mòn…
                 <span class="txt-review-title">
-                    3. Tài nguyên rừng
+                    3. Tài nguyên rừng  <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/3.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Diện tích rừng của Bà Rịa – Vũng Tàu không lớn. Đất có khả năng trồng rừng là 38.850 ha, chiếm 19,7%
                 diện tích tự nhiên, trong đó đất hiện đang có rừng là 30.186 ha (rừng tự nhiên là 15.993 ha, rừng trồng
@@ -113,7 +133,12 @@
                 Rừng của Bà Rịa – Vũng Tàu chỉ có tầm quan trọng trong tạo cảnh quan, môi trường, phòng hộ và phát triển
                 du lịch, còn việc khai thác rừng lấy gỗ, nguyên liệu không lớn.
                 <span class="txt-review-title">
-                    4. Tài nguyên khoáng sản
+                    4. Tài nguyên khoáng sản  <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/4.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Bà Rịa – Vũng Tàu có nhiều loại khoáng sản, nhưng đáng kể nhất là dầu mỏ, khí thiên nhiên và khoáng
                 sản
@@ -152,7 +177,12 @@
                 cao lanh, cát xây dựng, bentonit… nằm rải rác ở nhiều nơi, cho phép hình thành ngành công nghiệp sản
                 xuất vật liệu xây dựng rộng khắp trong tỉnh.
                 <span class="txt-review-title">
-                    5. Tài nguyên biển
+                    5. Tài nguyên biển  <span class="read_text">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <audio controls class="audio-listen">
+                            <source src="./audio/5.mp3" type="audio/ogg">
+                        </audio>
+                    </span>
                 </span>
                 - Bà Rịa – Vũng Tàu có bờ biển dài 305,4 km, trong đó khoảng 70 km có bãi cái thoai thoải, nước xanh,
                 có thể dùng làm bãi tắm quanh năm. Vịnh Giành Rái rộng khoảng 50 km2 có thể xây dựng một hệ thống
@@ -183,5 +213,31 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
 
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 </html>

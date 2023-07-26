@@ -74,6 +74,12 @@
         <h1 class="tile-split">địa hình bà rịa - vũng tàu</h1>
         <div class="container-item" id="content">
             <p class="text-review">
+                <span class="read_text">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <audio controls class="audio-listen">
+                        <source src="./1.mp3" type="audio/ogg">
+                    </audio>
+                </span>
                 - Bà Rịa - Vũng Tàu có 7 đơn vị hành chính nằm trên đất liền và một đơn vị hành chính hải đảo là huyện
                 Côn Đảo.
                 <br>
@@ -103,5 +109,32 @@
     </div>
 </body>
 <script type="module" src="./script/main.js"></script>
+<script>
+    let currentPlayingAudio = null;
+
+    // Lặp qua từng audio để gán sự kiện click
+    document.querySelectorAll(".fa-volume-high").forEach(function (volumeIcon) {
+        volumeIcon.onclick = function () {
+            // Lấy element audio liền kề với nút volumeIcon đang được click
+            const audio = volumeIcon.nextElementSibling;
+
+            // Kiểm tra xem audio có đang chạy không
+            if (audio.paused) {
+                // Nếu có audio khác đang chạy, dừng nó trước khi chạy audio mới
+                if (currentPlayingAudio && currentPlayingAudio !== audio) {
+                    currentPlayingAudio.pause();
+                }
+
+                // Chạy audio mới và gán nó là audio đang chạy hiện tại
+                audio.play();
+                currentPlayingAudio = audio;
+            } else {
+                // Nếu đang chạy, dừng audio và gán audio đang chạy là null
+                audio.pause();
+                currentPlayingAudio = null;
+            }
+        };
+    });
+</script>
 
 </html>
