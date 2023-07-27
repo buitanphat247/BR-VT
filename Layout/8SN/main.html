@@ -64,12 +64,14 @@
             <img src="./../../banner.png" alt="">
         </div>
         <script>
-            const value_padding = parseInt(
-                localStorage.getItem("nav_height")) + 'px';
-            console.log(value_padding);
-            $(".demoslide").css({
-                paddingTop: value_padding,
-            });
+            setInterval(function () {
+                const value_padding = parseInt(
+                    localStorage.getItem("nav_height")) + 'px';
+                console.log(value_padding);
+                $(".demoslide").css({
+                    paddingTop: value_padding,
+                });
+            }, 0);
         </script>
         <h1 class="tile-split">Sông Ngòi của bà rịa - vũng tàu</h1>
         <div class="container-item" id="content">
@@ -88,9 +90,8 @@
                 <span class="txt-review-title">
                     • Sông Dinh:
                 </span>
-                Sông Dinh là con sông lớn nhất của tỉnh Bà Rịa - Vũng Tàu, có chiều dài 100 km, lưu lượng
-                nước trung bình 100 m3/s. Sông Dinh bắt nguồn từ núi Dinh, chảy qua các huyện Long Điền, Đất Đỏ, Châu
-                Đức và đổ ra biển Đông tại khu vực Vũng Tàu.
+                Sông Dinh là một con sông đa chức năng, vừa là nguồn cung cấp nước cho sinh hoạt, sản xuất, giao thông
+                vận tải, du lịch vùa là nguồn cung cấp thủy sản quan trọng cho tỉnh BRVT
                 <span class="img-item">
                     <img src="./../../Img/song/sd.jpg" alt="">
                 </span>
@@ -99,7 +100,7 @@
                 <br>
                 <span class="txt-review-title">
                     • Sông Ray
-                    
+
                     <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
@@ -118,7 +119,7 @@
                 du lịch. Sông Ray cũng là một nguồn cung cấp thủy sản quan trọng cho tỉnh Bà Rịa - Vũng Tàu.
                 <br>
                 <span class="txt-review-title">
-                    • Sông Lòng Tàu   <span class="read_text">
+                    • Sông Lòng Tàu <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/3.mp3" type="audio/ogg">
@@ -136,14 +137,14 @@
                 Tàu.
                 <br>
                 <span class="txt-review-title">
-                    • Sông Cỏ May  
+                    • Sông Cỏ May
                     <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/4.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                     :
                 </span>
                 Sông Cỏ May là con sông có chiều dài ngắn nhất của tỉnh Bà Rịa - Vũng Tàu, có chiều dài
@@ -155,7 +156,7 @@
                 - Sông Cỏ May cũng là một con sông đa chức năng, cung cấp nước cho sinh hoạt, sản xuất, giao thông thủy
                 và du lịch. Sông Cỏ May cũng là một nguồn cung cấp thủy sản quan trọng cho tỉnh Bà Rịa - Vũng Tàu.
                 <span class="txt-review-title">
-                    Hệ thống kênh rạch    <span class="read_text">
+                    Hệ thống kênh rạch <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/5.mp3" type="audio/ogg">
@@ -177,7 +178,7 @@
                             <source src="./audio/6.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                     :
                 </span>
                 Các con sông ngòi và kênh rạch cung cấp nước cho sinh hoạt của con người, bao gồm uống, nấu
@@ -186,14 +187,14 @@
                 <br>
                 <span class="txt-review-title">
                     • Sản xuất
-                    
+
                     <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/7.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                     :
                 </span>
                 Các con sông ngòi và kênh rạch cung cấp nước cho sản xuất nông nghiệp, công nghiệp và thủy
@@ -208,7 +209,7 @@
                             <source src="./audio/8.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                     :
                 </span>
                 Các con sông ngòi và kênh rạch là tuyến giao thông quan trọng cho việc vận chuyển
@@ -223,7 +224,7 @@
                             <source src="./audio/9.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                     :
                 </span>
                 Các con sông ngòi và kênh rạch là một địa điểm du lịch hấp dẫn, mang đến cho du khách những

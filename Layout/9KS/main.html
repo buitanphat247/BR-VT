@@ -64,12 +64,14 @@
             <img src="./../../banner.png" alt="">
         </div>
         <script>
-            const value_padding = parseInt(
-                localStorage.getItem("nav_height")) + 'px';
-            console.log(value_padding);
-            $(".demoslide").css({
-                paddingTop: value_padding,
-            });
+            setInterval(function () {
+                const value_padding = parseInt(
+                    localStorage.getItem("nav_height")) + 'px';
+                console.log(value_padding);
+                $(".demoslide").css({
+                    paddingTop: value_padding,
+                });
+            }, 0);
         </script>
         <h1 class="tile-split">Khoáng Sản của bà rịa - vũng tàu </h1>
         <div class="container-item" id="content">
@@ -83,7 +85,7 @@
                             <source src="./audio/1.mp3" type="audio/ogg">
                         </audio>
                     </span>
-                    
+
                 </span>
                 - Nguồn nước mặt của Bà Rịa – Vũng Tàu chủ yếu do ba con sông lớn cung cấp, đó là sông Thị Vải, đoạn
                 chảy
@@ -115,7 +117,7 @@
                 mạnh. Ngoài ra, còn một tỷ trọng lớn đất không thuận lợi cho phát triển nông nghiệp bao gồm đất cát, đất
                 nhiễm phèn, mặn, đất xói mòn…
                 <span class="txt-review-title">
-                    3. Tài nguyên rừng  <span class="read_text">
+                    3. Tài nguyên rừng <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/3.mp3" type="audio/ogg">
@@ -133,7 +135,7 @@
                 Rừng của Bà Rịa – Vũng Tàu chỉ có tầm quan trọng trong tạo cảnh quan, môi trường, phòng hộ và phát triển
                 du lịch, còn việc khai thác rừng lấy gỗ, nguyên liệu không lớn.
                 <span class="txt-review-title">
-                    4. Tài nguyên khoáng sản  <span class="read_text">
+                    4. Tài nguyên khoáng sản <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/4.mp3" type="audio/ogg">
@@ -177,7 +179,7 @@
                 cao lanh, cát xây dựng, bentonit… nằm rải rác ở nhiều nơi, cho phép hình thành ngành công nghiệp sản
                 xuất vật liệu xây dựng rộng khắp trong tỉnh.
                 <span class="txt-review-title">
-                    5. Tài nguyên biển  <span class="read_text">
+                    5. Tài nguyên biển <span class="read_text">
                         <i class="fa-solid fa-volume-high"></i>
                         <audio controls class="audio-listen">
                             <source src="./audio/5.mp3" type="audio/ogg">
@@ -240,4 +242,5 @@
         };
     });
 </script>
+
 </html>

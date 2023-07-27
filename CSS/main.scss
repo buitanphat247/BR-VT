@@ -1,10 +1,19 @@
 $background-container: #28666e;
 @import url("./../Forms/indexHEADER/main.css");
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 body {
   display: flex;
   background: $background-container;
   height: auto;
   overflow: auto !important;
+  animation: fallFromTop 1s ease;
 }
 
 #container {

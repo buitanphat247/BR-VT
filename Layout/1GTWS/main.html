@@ -65,12 +65,14 @@
             <img src="./../../banner.png" alt="">
         </div>
         <script>
-            const value_padding = parseInt(
-                localStorage.getItem("nav_height")) + 'px';
-            console.log(value_padding);
-            $(".demoslide").css({
-                paddingTop: value_padding,
-            });
+            setInterval(function () {
+                const value_padding = parseInt(
+                    localStorage.getItem("nav_height")) + 'px';
+                console.log(value_padding);
+                $(".demoslide").css({
+                    paddingTop: value_padding,
+                });
+            }, 0);
         </script>
         <h1 class="tile-split">giới thiệu về website</h1>
         <div class="container-item" id="content">

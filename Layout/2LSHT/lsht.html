@@ -48,34 +48,36 @@
         <div id="container">
                 <div id="navbar">
                         <script>
-                            fetch('./../nav/nav.html')
-                                .then(response => response.text())
-                                .then(data => {
-                                    document.querySelector('#navbar').innerHTML = data;
-                                    const headerScripts = document.querySelectorAll('#navbar script');
-                                    headerScripts.forEach(script => {
-                                        eval(script.innerText); // Chạy script của header
-                                    });
-                                });
+                                fetch('./../nav/nav.html')
+                                        .then(response => response.text())
+                                        .then(data => {
+                                                document.querySelector('#navbar').innerHTML = data;
+                                                const headerScripts = document.querySelectorAll('#navbar script');
+                                                headerScripts.forEach(script => {
+                                                        eval(script.innerText); // Chạy script của header
+                                                });
+                                        });
                         </script>
-                    </div>
+                </div>
                 <div class="demoslide slider-container">
                         <img src="./../../banner.png" alt="">
-                    </div>
-                    <script>
-                        const value_padding = parseInt(
-                            localStorage.getItem("nav_height")) + 'px';
-                        console.log(value_padding);
-                        $(".demoslide").css({
-                            paddingTop: value_padding,
-                        });
-                    </script>
-              
+                </div>
+                <script>
+                        setInterval(function () {
+                                const value_padding = parseInt(
+                                        localStorage.getItem("nav_height")) + 'px';
+                                console.log(value_padding);
+                                $(".demoslide").css({
+                                        paddingTop: value_padding,
+                                });
+                        }, 0);
+                </script>
+
                 <h1 class="tile-split">Lịch sử hình thành và phát triển Bà Rịa - vũng tàu</h1>
                 <div class="container-item" id="content">
                         <div class="print-view-content content">
                                 <h2>
-                                        <span  style="font-size: 19pt" data-mce-style="font-size: 19pt;"><strong><span
+                                        <span style="font-size: 19pt" data-mce-style="font-size: 19pt;"><strong><span
                                                                 id="L.E1.BB.8Bch_s.E1.BB.AD_t.C3.AAn_g.E1.BB.8Di_.C4.91.E1.BB.8Ba_danh"
                                                                 class="mw-headline">Lịch sử tên gọi địa
                                                                 danh</span></strong></span>
@@ -95,113 +97,118 @@
                                 </ul>
                                 <table border="2" cellspacing="0" cellpadding="4" class="list_lsht">
                                         <tbody>
-                                                <tr >
+                                                <tr>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province year_number"
+                                                                <span style="font-size: 8pt"
+                                                                        class="province year_number"
                                                                         data-mce-style="font-size: 19pt;">1947</span>
                                                         </th>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province year_number"
+                                                                <span style="font-size: 8pt"
+                                                                        class="province year_number"
                                                                         data-mce-style="font-size: 19pt;">1956</span>
                                                         </th>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province year_number"
+                                                                <span style="font-size: 8pt"
+                                                                        class="province year_number"
                                                                         data-mce-style="font-size: 19pt;">1964</span>
                                                         </th>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province year_number"
+                                                                <span style="font-size: 8pt"
+                                                                        class="province year_number"
                                                                         data-mce-style="font-size: 19pt;">1975</span>
                                                         </th>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">1979</span>
                                                         </th>
                                                         <th>
-                                                                <span style="font-size: 19pt" class="province year_number"
+                                                                <span style="font-size: 8pt"
+                                                                        class="province year_number"
                                                                         data-mce-style="font-size: 19pt;">1991</span>
                                                         </th>
                                                 </tr>
                                                 <tr>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Bà
                                                                         Rịa</span>
                                                         </td>
                                                         <td colspan="2">
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Phước
                                                                         Tuy</span>
                                                         </td>
                                                         <td colspan="2">
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Đồng
                                                                         Nai</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh
                                                                         BRVT</span>
                                                         </td>
                                                 </tr>
                                                 <tr>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Vũng
                                                                         Tàu</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Phước
                                                                         Tuy</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">thị xã Vũng
                                                                         Tàu</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Đồng
                                                                         Nai</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">Đặc khu Vũng
                                                                         Tàu-Côn Đảo</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh
                                                                         BRVT</span>
                                                         </td>
                                                 </tr>
                                                 <tr>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">Côn Lôn thuộc
                                                                         Hà Tiên</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Côn
                                                                         Đảo</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">Côn Đảo</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh Hậu
                                                                         Giang</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">Đặc Khu Vũng
                                                                         Tàu-Côn Đảo</span>
                                                         </td>
                                                         <td>
-                                                                <span style="font-size: 19pt" class="province"
+                                                                <span style="font-size: 8pt" class="province"
                                                                         data-mce-style="font-size: 19pt;">tỉnh
                                                                         BRVT</span>
                                                         </td>
@@ -653,13 +660,13 @@
                 </div>
                 <style>
                         .column1 {
-                          width: 100px;
+                                width: 100px;
                         }
-                      
+
                         .column2 {
-                          width: 200px;
+                                width: 200px;
                         }
-                      </style>
+                </style>
                 <footer id="footer-item">
                 </footer>
                 <script>
